@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/contentModel.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/indexLayout.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/riderModule.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs" />
+      <change beforePath="$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs" afterPath="$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs" />
+      <change beforePath="$PROJECT_DIR$/Services/Services.csproj" afterPath="$PROJECT_DIR$/Services/Services.csproj" />
+      <change beforePath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" afterPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" />
+      <change beforePath="$PROJECT_DIR$/Services/Startup.cs" afterPath="$PROJECT_DIR$/Services/Startup.cs" />
+      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
+      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.deps.json" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.deps.json" />
+      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" />
+      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" />
+      <change beforePath="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" afterPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="SpeectToTextController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <marker date="1525784038294" expanded="false" signature="6:57" ph="..." />
+                <marker date="1525784038294" expanded="true" signature="89:938" ph="{...}" />
+                <marker date="1525784038294" expanded="true" signature="174:936" ph="{...}" />
+                <marker date="1525784038294" expanded="true" signature="314:382" ph="{...}" />
+                <marker date="1525784038294" expanded="true" signature="476:930" ph="{...}" />
+                <marker date="1525784038294" expanded="true" signature="770:865" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AzureSTTService.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
+              <folding>
+                <marker date="1525783917688" expanded="true" signature="6:121" ph="..." />
+                <marker date="1525783917688" expanded="true" signature="150:4186" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="197:4184" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="337:4173" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="361:586" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+                <marker date="1525783917688" expanded="true" signature="627:750" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="983:1089" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+                <marker date="1525783917688" expanded="true" signature="1208:3901" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="2003:3887" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="2043:2170" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+                <marker date="1525783917688" expanded="true" signature="2329:2883" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="2376:2480" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+                <marker date="1525783917688" expanded="true" signature="2657:2780" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="2905:2989" ph="/* Get the response from the service. ... */" />
+                <marker date="1525783917688" expanded="true" signature="3400:3513" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="3515:3621" ph="/* Console.WriteLine(responseString); ... */" />
+                <marker date="1525783917688" expanded="true" signature="3707:3846" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="3934:4059" ph="{...}" />
+                <marker date="1525783917688" expanded="true" signature="4080:4125" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IAzureSTTService.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <marker date="1525783692717" expanded="true" signature="6:89" ph="..." />
+                <marker date="1525783692717" expanded="true" signature="119:239" ph="{...}" />
+                <marker date="1525783692717" expanded="true" signature="159:237" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpWebResponse.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3007C24D-6E9D-4643-9A0A-490ADC997A34/91/9e745bd0/HttpWebResponse.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="193" column="34" lean-forward="false" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpeechRecognitionResult.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+              <folding>
+                <marker date="1525783650677" expanded="true" signature="25:173" ph="{...}" />
+                <marker date="1525783650677" expanded="true" signature="68:171" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AzureAuthenticationService.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Services/Services/AzureAuthenticationService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-631">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Services/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <marker date="1525781610172" expanded="true" signature="6:98" ph="..." />
+                <marker date="1525781610172" expanded="true" signature="118:362" ph="{...}" />
+                <marker date="1525781610172" expanded="true" signature="152:360" ph="{...}" />
+                <marker date="1525781610172" expanded="true" signature="232:324" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpeechToText/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding>
+                <marker date="1525781031001" expanded="false" signature="6:199" ph="..." />
+                <marker date="1525781031001" expanded="true" signature="219:1640" ph="{...}" />
+                <marker date="1525781031001" expanded="true" signature="246:1638" ph="{...}" />
+                <marker date="1525781031001" expanded="true" signature="305:368" ph="{...}" />
+                <marker date="1525781031001" expanded="true" signature="591:855" ph="{...}" />
+                <marker date="1525781031001" expanded="true" signature="673:784" ph="{...}" />
+                <marker date="1525781031001" expanded="true" signature="1043:1632" ph="{...}" />
+                <marker date="1525781031001" expanded="true" signature="1090:1167" ph="{...}" />
+                <marker date="1525781031001" expanded="true" signature="1427:1577" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3007C24D-6E9D-4643-9A0A-490ADC997A34/91/9e745bd0/HttpWebResponse.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SpeechToText/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/Services/AzureAuthenticationService.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Services/Startup.cs" />
+        <option value="$PROJECT_DIR$/Services/SpeechRecognitionResult.cs" />
+        <option value="$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs" />
+        <option value="$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs" />
+        <option value="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" />
+        <option value="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="32" />
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Models" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="STTRest" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="STTRest" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/SpeechToText/bin/Debug/netcoreapp2.0/STTRest.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SpeechToText" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SpeechToText/STTRest.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.0" />
+      <browser url="http://localhost:5000" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="" />
+      <created>1525781120236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525781120236</updated>
+      <workItem from="1525781121827" duration="2658000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2658000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" initialLine="23">
+            <startOffsets>
+              <startOffset value="891" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="920" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Services/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1525781610172" expanded="true" signature="6:98" ph="..." />
+            <marker date="1525781610172" expanded="true" signature="118:362" ph="{...}" />
+            <marker date="1525781610172" expanded="true" signature="152:360" ph="{...}" />
+            <marker date="1525781610172" expanded="true" signature="232:324" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpeechToText/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <marker date="1525781031001" expanded="false" signature="6:199" ph="..." />
+            <marker date="1525781031001" expanded="true" signature="219:1640" ph="{...}" />
+            <marker date="1525781031001" expanded="true" signature="246:1638" ph="{...}" />
+            <marker date="1525781031001" expanded="true" signature="305:368" ph="{...}" />
+            <marker date="1525781031001" expanded="true" signature="591:855" ph="{...}" />
+            <marker date="1525781031001" expanded="true" signature="673:784" ph="{...}" />
+            <marker date="1525781031001" expanded="true" signature="1043:1632" ph="{...}" />
+            <marker date="1525781031001" expanded="true" signature="1090:1167" ph="{...}" />
+            <marker date="1525781031001" expanded="true" signature="1427:1577" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/SpeechRecognitionResult.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/Services/AzureAuthenticationService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-631">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3007C24D-6E9D-4643-9A0A-490ADC997A34/91/9e745bd0/HttpWebResponse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="193" column="34" lean-forward="false" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1525783692717" expanded="true" signature="6:89" ph="..." />
+            <marker date="1525783692717" expanded="true" signature="119:239" ph="{...}" />
+            <marker date="1525783692717" expanded="true" signature="159:237" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <marker date="1525784038294" expanded="false" signature="6:57" ph="..." />
+            <marker date="1525784038294" expanded="true" signature="89:938" ph="{...}" />
+            <marker date="1525784038294" expanded="true" signature="174:936" ph="{...}" />
+            <marker date="1525784038294" expanded="true" signature="314:382" ph="{...}" />
+            <marker date="1525784038294" expanded="true" signature="476:930" ph="{...}" />
+            <marker date="1525784038294" expanded="true" signature="770:865" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <marker date="1525783650677" expanded="true" signature="25:173" ph="{...}" />
+            <marker date="1525783650677" expanded="true" signature="68:171" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
+          <folding>
+            <marker date="1525783917688" expanded="true" signature="6:121" ph="..." />
+            <marker date="1525783917688" expanded="true" signature="150:4186" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="197:4184" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="337:4173" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="361:586" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+            <marker date="1525783917688" expanded="true" signature="627:750" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="983:1089" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+            <marker date="1525783917688" expanded="true" signature="1208:3901" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="2003:3887" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="2043:2170" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+            <marker date="1525783917688" expanded="true" signature="2329:2883" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="2376:2480" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+            <marker date="1525783917688" expanded="true" signature="2657:2780" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="2905:2989" ph="/* Get the response from the service. ... */" />
+            <marker date="1525783917688" expanded="true" signature="3400:3513" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="3515:3621" ph="/* Console.WriteLine(responseString); ... */" />
+            <marker date="1525783917688" expanded="true" signature="3707:3846" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="3934:4059" ph="{...}" />
+            <marker date="1525783917688" expanded="true" signature="4080:4125" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

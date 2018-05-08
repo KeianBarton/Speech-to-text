@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Services.Models;
 
 namespace Services.IServices
 {
     public interface IAzureSTTService
     {
-        void ParseSpeectToText(string[] args);
+        SpeechRecognitionResult ParseSpeectToText(string[] args);
     }
 }

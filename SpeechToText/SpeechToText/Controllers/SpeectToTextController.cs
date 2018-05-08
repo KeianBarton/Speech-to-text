@@ -19,9 +19,15 @@ namespace STTRest.Controllers
         [Route("parse")]
         public IActionResult ParseSpeectToText()
         {
-            var input = new string []{"https://speech.platform.bing.com/recognize", "C:\\Users\\scott.alexander\\Downloads\\carlin_pc.wav"};
-            _azureSTTService.ParseSpeectToText(input);
-            return Ok();
+            var input = new string []{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-US&format=detailed", "Data/miller_larry.wav"};
+            var result = _azureSTTService.ParseSpeectToText(input);
+
+            if (result == null)
+            {
+                return BadRequest("An unknown error has occured");
+            }
+            
+            return Ok(result.JSONResult);
         }
     }
 }
