@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Services/IServices/IWatsonSTTService.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Services/Services/WatsonSTTService.cs" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Services/Startup.cs" afterPath="$PROJECT_DIR$/Services/Startup.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" />
-      <change beforePath="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" afterPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" />
-    </list>
+    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +47,8 @@
       <file leaf-file-name="WatsonSTTService.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Services/Services/WatsonSTTService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+            <state relative-caret-position="265">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <marker date="1525859992593" expanded="false" signature="6:354" ph="..." />
                 <marker date="1525859992593" expanded="true" signature="383:2009" ph="{...}" />
@@ -244,15 +235,10 @@
               <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
+        <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
       <pane id="Scratches" />
@@ -308,12 +294,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525781120236</updated>
       <workItem from="1525781121827" duration="4541000" />
-      <workItem from="1525857839407" duration="1783000" />
+      <workItem from="1525857839407" duration="2104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6324000" />
+    <option name="totallyTimeSpent" value="6645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,7 +312,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -336,7 +321,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -672,8 +657,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Services/Services/WatsonSTTService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+        <state relative-caret-position="265">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <marker date="1525859992593" expanded="false" signature="6:354" ph="..." />
             <marker date="1525859992593" expanded="true" signature="383:2009" ph="{...}" />

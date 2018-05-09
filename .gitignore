@@ -3,3 +3,5 @@ SpeechToText/Services/obj/
 SpeechToText/SpeechToText/bin/
 SpeechToText/SpeechToText/obj/
 SpeechToText/SpeechToText/bin/
+.DS_Store
+SpeechToText/.DS_Store
