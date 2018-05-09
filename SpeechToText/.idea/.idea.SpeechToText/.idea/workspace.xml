@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/contentModel.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/indexLayout.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/riderModule.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs" afterPath="$PROJECT_DIR$/Services/IServices/IAzureSTTService.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/Services.csproj" afterPath="$PROJECT_DIR$/Services/Services.csproj" />
-      <change beforePath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" afterPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/Startup.cs" afterPath="$PROJECT_DIR$/Services/Startup.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.deps.json" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.deps.json" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" />
-      <change beforePath="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" afterPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" />
-    </list>
+    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <marker date="1525784038294" expanded="false" signature="6:57" ph="..." />
                 <marker date="1525784038294" expanded="true" signature="89:938" ph="{...}" />
@@ -303,12 +287,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525781120236</updated>
-      <workItem from="1525781121827" duration="2658000" />
+      <workItem from="1525781121827" duration="2859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2658000" />
+    <option name="totallyTimeSpent" value="2859000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,7 +429,7 @@
     <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <marker date="1525784038294" expanded="false" signature="6:57" ph="..." />
             <marker date="1525784038294" expanded="true" signature="89:938" ph="{...}" />
