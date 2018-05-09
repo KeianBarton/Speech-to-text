@@ -10,6 +10,7 @@
         </e>
         <e p="IServices" t="Include">
           <e p="IAzureSTTService.cs" t="Include" />
+          <e p="IWatsonSTTService.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="SpeechRecognitionResult.cs" t="Include" />
@@ -23,6 +24,7 @@
         </e>
         <e p="Services" t="Include">
           <e p="AzureSTTService.cs" t="Include" />
+          <e p="WatsonSTTService.cs" t="Include" />
         </e>
         <e p="Services.csproj" t="IncludeRecursive" />
         <e p="Startup.cs" t="Include" />
@@ -32,9 +34,10 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="SpeectToTextController.cs" t="Include" />
+          <e p="SpeechToTextController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
+          <e p="audio-file.flac" t="Include" />
           <e p="miller_larry.wav" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

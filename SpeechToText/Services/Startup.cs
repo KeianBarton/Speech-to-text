@@ -9,6 +9,7 @@ namespace Services
         public static void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IAzureSTTService, AzureSTTService>();
+            services.AddTransient<IWatsonSTTService, WatsonSTTService>();
         }
 
         //public Configure()
