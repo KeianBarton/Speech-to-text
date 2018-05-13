@@ -34,8 +34,10 @@ namespace Services.Services
                     Convert.ToBase64String(
                         Encoding.ASCII.GetBytes(
                             username + ":" + password)));
-
-                var content = new StreamContent(new FileStream(file, FileMode.Open));
+    
+//                var content = new StreamContent(new FileStream(file, FileMode.Open));
+                var bytes = Convert.FromBase64String(file);
+                var content = new StreamContent(new MemoryStream(bytes));
                 content.Headers.ContentType = new MediaTypeHeaderValue("audio/wav");
 
                 var response = client

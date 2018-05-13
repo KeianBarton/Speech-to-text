@@ -26,6 +26,16 @@ namespace STTRest
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials()
+                        .WithExposedHeaders("x-custom-header"));
+            });
+            
             Services.Startup.ConfigureServices(services);
         }
 
@@ -46,7 +56,8 @@ namespace STTRest
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = string.Empty;
             });
-
+            
+            app.UseCors("AllowAllOrigins");
             app.UseMvcWithDefaultRoute();
         }
     }

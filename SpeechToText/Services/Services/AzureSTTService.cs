@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using Services.Classes;
 using Services.IServices;
 using Services.Models;
@@ -30,32 +31,101 @@ namespace Services.Services
             /*
              * Input your own audio file or use read from a microphone stream directly.
              */
+            
             string audioFile = args[1];
+            string audioBase64 = args[2];
+            
+            
             string responseString;
             FileStream fs;
+            MemoryStream ms;
 
-            try
+            var token = _authentication.GetAccessToken();
+            Console.WriteLine("Token: {0}\n", token);
+            Console.WriteLine("Request Uri: " + requestUri + Environment.NewLine);
+
+            HttpWebRequest request;
+            request = (HttpWebRequest) WebRequest.Create(requestUri);
+            request.SendChunked = true;
+            request.Accept = @"application/json;text/xml";
+            request.Method = "POST";
+            request.ProtocolVersion = HttpVersion.Version11;
+            request.Host = host;
+            request.ContentType = contentType;
+            request.Headers["Authorization"] = "Bearer " + token;
+            
+            if (!string.IsNullOrEmpty(audioFile))
             {
-                var token = _authentication.GetAccessToken();
-                Console.WriteLine("Token: {0}\n", token);
-                Console.WriteLine("Request Uri: " + requestUri + Environment.NewLine);
+                try
+                {
+                    
+                    using (fs = new FileStream(audioFile, FileMode.Open, FileAccess.Read))
+                    {
 
-                HttpWebRequest request;
-                request = (HttpWebRequest) WebRequest.Create(requestUri);
-                request.SendChunked = true;
-                request.Accept = @"application/json;text/xml";
-                request.Method = "POST";
-                request.ProtocolVersion = HttpVersion.Version11;
-                request.Host = host;
-                request.ContentType = contentType;
-                request.Headers["Authorization"] = "Bearer " + token;
+                        /*
+                         * Open a request stream and write 1024 byte chunks in the stream one at a time.
+                         */
+                        byte[] buffer = null;
+                        int bytesRead = 0;
+                        using (Stream requestStream = request.GetRequestStream())
+                        {
+                            /*
+                             * Read 1024 raw bytes from the input audio file.
+                             */
+                            buffer = new Byte[checked((uint) Math.Min(1024, (int) fs.Length))];
+                            while ((bytesRead = fs.Read(buffer, 0, buffer.Length)) != 0)
+                            {
+                                requestStream.Write(buffer, 0, bytesRead);
+                            }
 
-                using (fs = new FileStream(audioFile, FileMode.Open, FileAccess.Read))
+                            // Flush
+                            requestStream.Flush();
+                        }
+
+                        /*
+                         * Get the response from the service.
+                         */
+                        Console.WriteLine("Response:");
+                        using (WebResponse response = request.GetResponse())
+                        {
+                            var statusCode = ((HttpWebResponse) response).StatusCode.ToString();
+                            int.TryParse(statusCode, out int statusCodeInt);
+
+                            using (StreamReader sr = new StreamReader(response.GetResponseStream()))
+                            {
+                                responseString = sr.ReadToEnd();
+                            }
+
+//                        Console.WriteLine(responseString);
+//                        Console.ReadLine();
+                            return new SpeechRecognitionResult()
+                            {
+                                StatusCode = statusCodeInt,
+                                JSONResult = responseString
+                            };
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    Console.WriteLine(ex.Message);
+                }
+
+                finally
                 {
 
+                }
+            }
+
+            if (!string.IsNullOrEmpty(audioBase64))
+            {
+                var bytes = Convert.FromBase64String(audioBase64);
+                using (ms = new MemoryStream(bytes))
+                {
                     /*
-                     * Open a request stream and write 1024 byte chunks in the stream one at a time.
-                     */
+                        * Open a request stream and write 1024 byte chunks in the stream one at a time.
+                        */
                     byte[] buffer = null;
                     int bytesRead = 0;
                     using (Stream requestStream = request.GetRequestStream())
@@ -63,8 +133,8 @@ namespace Services.Services
                         /*
                          * Read 1024 raw bytes from the input audio file.
                          */
-                        buffer = new Byte[checked((uint) Math.Min(1024, (int) fs.Length))];
-                        while ((bytesRead = fs.Read(buffer, 0, buffer.Length)) != 0)
+                        buffer = new Byte[checked((uint) Math.Min(1024, (int) ms.Length))];
+                        while ((bytesRead = ms.Read(buffer, 0, buffer.Length)) != 0)
                         {
                             requestStream.Write(buffer, 0, bytesRead);
                         }
@@ -94,20 +164,11 @@ namespace Services.Services
                             StatusCode = statusCodeInt,
                             JSONResult = responseString
                         };
-                    }
+                    }   
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                Console.WriteLine(ex.Message);
-            }
-
-            finally
-            {
                 
             }
-            
+
             return null;
         }
     

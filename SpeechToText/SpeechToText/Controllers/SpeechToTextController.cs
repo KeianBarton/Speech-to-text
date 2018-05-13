@@ -4,7 +4,7 @@ using Services.IServices;
 
 namespace STTRest.Controllers
 {
-    [Route("api/controller")]
+    [Route("api/speechToText")]
     public class SpeechToTextController : Controller
     {
 
@@ -19,9 +19,9 @@ namespace STTRest.Controllers
 
         [HttpPost]
         [Route("parseAzure")]
-        public IActionResult ParseSpeectToTextAzure()
+        public IActionResult ParseSpeectToTextAzure(ClientWavObject clientInput)
         {
-            var input = new string []{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-US&format=detailed", "Data/miller_larry.wav"};
+            var input = new string []{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-US&format=detailed", "", null};
             var result = _azureSTTService.ParseSpeectToText(input);
 
             if (result == null)
@@ -34,9 +34,10 @@ namespace STTRest.Controllers
         
         [HttpPost]
         [Route("parseWatson")]
-        public IActionResult ParseSpeectToTextWatson()
+        public IActionResult ParseSpeectToTextWatson([FromBody] ClientWavObject clientInput)
         {
-            var input = new string []{"Data/miller_larry.wav"};
+//            var input = new string []{"Data/miller_larry.wav"};
+            var input = new string[] {clientInput.Base64String};
             var result = _watsonSttService.ParseSpeectToText(input);
 
             if (result == null)
@@ -45,6 +46,11 @@ namespace STTRest.Controllers
             }
             
             return Ok(result.JSONResult);
+        }
+
+        public class ClientWavObject
+        {
+            public string Base64String { get; set; }
         }
     }
 }

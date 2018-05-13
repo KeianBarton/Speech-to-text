@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { SpeechtotextService } from '../shared/services/speechtotext.service';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,10 @@ export class AppComponent {
   sampleRate: number = 0;
 
   WAVFile: Blob = null;
+
+  constructor(private _speechToTextService : SpeechtotextService){
+
+  }
 
   play() {
     this.startRecording({ video: false, audio: true, maxLength: 10, debug: true });
@@ -160,18 +165,39 @@ export class AppComponent {
 
     // our final binary blob that we can hand off
     var blob = new Blob([view], { type: 'audio/wav' });
+    this.wavBlobToBase64(blob, "azure");
+  };
+
+  downloadWav(blob){
     var url = window.URL.createObjectURL(blob);
 
     var a = document.createElement("a");
     document.body.appendChild(a);
 
-    blob = blob;
     url = window.URL.createObjectURL(blob);
     a.href = url;
     a.download = "wavwob";
     a.click();
     window.URL.revokeObjectURL(url);
-  };
+  }
+
+  wavBlobToBase64(blob : any, callbackType: any){
+    var reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onloadend = this.wavBlobToBase64Callback.bind(this);
+    console.log("Does it get set");
+  }
+
+  wavBlobToBase64Callback(this, event){
+    let base64Data = event.target.result.split(',')[1];
+    this.submitWav64String(base64Data);
+  }
+
+  submitWav64String(base64String : string, calbackType : any){
+    this._speechToTextService.postWAVWatson(base64String).subscribe(
+      response => {console.log("Success")}
+    )
+  }
 }
 
   
