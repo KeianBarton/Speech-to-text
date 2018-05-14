@@ -194,7 +194,7 @@ export class AppComponent {
   }
 
   submitWav64String(base64String : string, calbackType : any){
-    this._speechToTextService.postWAVWatson(base64String).subscribe(
+    this._speechToTextService.postWAVAzure(base64String).subscribe(
       response => {console.log("Success")}
     )
   }

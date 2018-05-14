@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 
-
 namespace STTRest
 {
     public class Startup
@@ -21,10 +20,7 @@ namespace STTRest
         {
             services.AddMvc();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
-            });
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "My API", Version = "v1"}); });
 
             services.AddCors(options =>
             {
@@ -35,17 +31,14 @@ namespace STTRest
                         .AllowCredentials()
                         .WithExposedHeaders("x-custom-header"));
             });
-            
+
             Services.Startup.ConfigureServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
@@ -56,7 +49,7 @@ namespace STTRest
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = string.Empty;
             });
-            
+
             app.UseCors("AllowAllOrigins");
             app.UseMvcWithDefaultRoute();
         }
