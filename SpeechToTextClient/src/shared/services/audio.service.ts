@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class RecordService {
+export class AudioService {
   private leftchannel: any = new Array;
   private rightchannel: any = new Array;
   private recordingLength = 0;
