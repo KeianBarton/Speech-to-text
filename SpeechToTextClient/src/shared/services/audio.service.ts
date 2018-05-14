@@ -9,7 +9,13 @@ export class AudioService {
   private recordingLength = 0;
   private bufferSize = 2048;
   private sampleRate = 0;
-  private stream: MediaStream;
+  public stream: MediaStream;
+
+  stopRecording(): any {
+    const stream = this.stream;
+    stream.getAudioTracks().forEach(track => track.stop());
+    stream.getVideoTracks().forEach(track => track.stop());
+  }
 
   startRecording(config) {
     const self = this;
@@ -33,6 +39,12 @@ export class AudioService {
         .catch(error => console.log('An error has occured during recording'));
     } else {
       alert('Audio capture is not supported in this browser');
+    }
+  }
+
+  getAudioString() {
+    if (this.stream) {
+      return this.WAVProcessing();
     }
   }
 
