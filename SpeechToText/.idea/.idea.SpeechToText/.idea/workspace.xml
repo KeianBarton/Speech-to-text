@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs" afterPath="$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" afterPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/Services/WatsonSTTService.cs" afterPath="$PROJECT_DIR$/Services/Services/WatsonSTTService.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" />
-      <change beforePath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" afterPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" />
-    </list>
+    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -231,8 +223,8 @@
           <file leaf-file-name="SpeechRecognitionResult.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
                   <folding>
                     <marker date="1526305477248" expanded="true" signature="25:306" ph="{...}" />
                     <marker date="1526305477248" expanded="true" signature="68:304" ph="{...}" />
@@ -444,12 +436,12 @@
       <workItem from="1525857839407" duration="2555000" />
       <workItem from="1526048074705" duration="4439000" />
       <workItem from="1526226594458" duration="5490000" />
-      <workItem from="1526301724502" duration="1618000" />
+      <workItem from="1526301724502" duration="2442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18689000" />
+    <option name="totallyTimeSpent" value="19513000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1317,8 +1309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
             <marker date="1526305477248" expanded="true" signature="25:306" ph="{...}" />
             <marker date="1526305477248" expanded="true" signature="68:304" ph="{...}" />

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable} from 'rxjs';
+
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
-
+import 'rxjs/add/operator/map';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +21,16 @@ export class SpeechtotextService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const options = {headers: headers};
 
+    const t0 = performance.now();
+    let t1 = null;
+
     return this._http.post<any>(this._apiRoot + 'parseAzure', body, options)
       .do(data => {
+        t1 = performance.now();
       })
+      .map(data => {
+        return this.processRecogntionModel(data, t1-t0);
+      })  
       .catch(this.handleError);
   }
 
@@ -32,11 +40,28 @@ export class SpeechtotextService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const options = {headers: headers};
 
+    const t0 = performance.now();
+    let t1 = null;
+
     return this._http.post<any>(this._apiRoot + 'parsewatson', body, options)
       .do(data => {
       })
+      .map(data => {
+        return this.processRecogntionModel(data, t1-t0);
+      }) 
       .catch(this.handleError);
   }
+
+  processRecogntionModel(data, time){
+    let res = new RecognitionResponse();
+        res.StatusCode = data.StatusCode;
+        res.JSONResult = data.JSONResult;
+        res.ExternalServiceTimeInMilliseconds = data.ExternalServiceTimeInMilliseconds;
+        res.TotalBackendTimeInMilliseconds = data.TotalBackendTimeInMilliseconds;
+        res.TotalHttpTimeInMilliseconds = time;
+
+        return res
+  } 
 
   private handleError(err: HttpErrorResponse) {
     console.log(err.message);
