@@ -11,7 +11,6 @@ export class RecordComponent {
   @ViewChild('audioElement')
   private audioElement: any;
 
-  private stream: MediaStream;
   private wavBase64String = '';
   @Output() audioEmitter = new EventEmitter<string>();
 
@@ -19,7 +18,7 @@ export class RecordComponent {
     private _audioService: AudioService
   ) {}
 
-  record() {
+  startRecording() {
     this.wavBase64String = '';
     this._audioService.startRecording({
       video: false,
@@ -29,11 +28,8 @@ export class RecordComponent {
     });
   }
 
-  stop() {
-    const stream = this.stream;
-    stream.getAudioTracks().forEach(track => track.stop());
-    stream.getVideoTracks().forEach(track => track.stop());
-    this.wavBase64String = this._audioService.WAVProcessing();
-    this.stream = null;
+  stopRecording() {
+    this._audioService.stopRecording();
+    this.wavBase64String = this._audioService.getAudioString();
   }
 }
