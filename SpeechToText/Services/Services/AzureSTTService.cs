@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -143,10 +144,9 @@ namespace Services.Services
                         requestStream.Flush();
                     }
 
-                    /*
-                     * Get the response from the service.
-                     */
-                    Console.WriteLine("Response:");
+                    Stopwatch sw = new Stopwatch();
+                    sw.Start();
+                    
                     using (WebResponse response = request.GetResponse())
                     {
                         var statusCode = ((HttpWebResponse) response).StatusCode.ToString();
@@ -156,13 +156,13 @@ namespace Services.Services
                         {
                             responseString = sr.ReadToEnd();
                         }
-
-//                        Console.WriteLine(responseString);
-//                        Console.ReadLine();
+                        
+                        sw.Stop();
                         return new SpeechRecognitionResult()
                         {
                             StatusCode = statusCodeInt,
-                            JSONResult = responseString
+                            JSONResult = responseString,
+                            ExternalServiceTimeInMilliseconds = sw.ElapsedMilliseconds
                         };
                     }   
                 }

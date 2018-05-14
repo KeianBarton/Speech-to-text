@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -40,15 +41,23 @@ namespace Services.Services
                 var content = new StreamContent(new MemoryStream(bytes));
                 content.Headers.ContentType = new MediaTypeHeaderValue("audio/wav");
 
+                Stopwatch sw = new Stopwatch();
+                sw.Start();
+                
                 var response = client
                     .PostAsync("https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?continuous=true&model=" + model,
                         content).Result;
+
                 if (!response.IsSuccessStatusCode) return null;
                 var res = response.Content.ReadAsStringAsync().Result;
+                
+                sw.Stop();
+                
                 return new SpeechRecognitionResult()
                 {
                     JSONResult = res,
-                    StatusCode = 200 
+                    StatusCode = 200,
+                    ExternalServiceTimeInMilliseconds = sw.ElapsedMilliseconds
                 };
             }
 
