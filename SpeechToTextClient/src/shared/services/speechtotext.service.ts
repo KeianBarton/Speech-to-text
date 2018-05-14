@@ -11,28 +11,28 @@ import 'rxjs/add/operator/do';
 })
 export class SpeechtotextService {
 
-  _apiRoot = "http://localhost:5000/api/speechToText/"
-  constructor(private _http : HttpClient) { }
+  _apiRoot = 'http://localhost:5000/api/speechToText/';
+  constructor(private _http: HttpClient) { }
 
-  postWAVAzure(wavBlob : any): Observable<any> {
+  postWAVAzure(wavBlob: any): Observable<any> {
 
     const body = {base64String : wavBlob}
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const options = {headers: headers};
 
-    return this._http.post<any>(this._apiRoot + "parseAzure", body, options)
+    return this._http.post<any>(this._apiRoot + 'parseAzure', body, options)
       .do(data => {
       })
       .catch(this.handleError);
   }
 
-  postWAVWatson(wavBlob : any): Observable<any> {
+  postWAVWatson(wavBlob: any): Observable<any> {
 
     const body = JSON.stringify({Base64String : wavBlob});
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const options = {headers: headers};
 
-    return this._http.post<any>(this._apiRoot + "parsewatson", body, options)
+    return this._http.post<any>(this._apiRoot + 'parsewatson', body, options)
       .do(data => {
       })
       .catch(this.handleError);
@@ -42,6 +42,4 @@ export class SpeechtotextService {
     console.log(err.message);
     return Observable.throw(err.message);
   }
-
-  
 }
