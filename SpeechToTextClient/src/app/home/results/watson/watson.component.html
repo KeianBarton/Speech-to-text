@@ -1,3 +1,19 @@
-<p>
-  watson works!
-</p>
+<div class="card" *ngIf="responseModel != null">
+  <div class="card-header">
+    Watson Speech to Text
+  </div>
+  <div class="card-body">
+    <div class="row">
+        <p class="card-text"> Total Time : {{responseModel.TotalHttpTimeInMilliseconds}}
+    </div>
+  </div>
+</div>
+
+<div class="card" *ngIf="responseModel == null">
+  <div class="card-header">
+    Watson Speech to Text
+  </div>
+  <div class="card-body">
+      <h5 class="card-title">Loading</h5>
+  </div>div>
+</div>

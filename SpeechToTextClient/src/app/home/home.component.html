@@ -1,8 +1,13 @@
 <div class="container">
   <h1>{{title}}</h1>
+
   <app-record (audioEmitter)="handleAudioChange($event)"></app-record>
+  
+  <div *ngIf="wavBase64String != null">
   <app-aws [wavBase64String]="wavBase64String"></app-aws>
   <app-azure [wavBase64String]="wavBase64String"></app-azure>
   <app-watson [wavBase64String]="wavBase64String"></app-watson>
+  </div>
+
   <img src="../../assets/images/DigitalLogoWhite.png">
 </div>
