@@ -10,8 +10,9 @@ export class RecordComponent {
 
   @ViewChild('audioElement')
   private audioElement: any;
-
   private wavBase64String = '';
+  private recording: boolean = false;
+
   @Output() audioEmitter = new EventEmitter<string>();
 
   constructor(
@@ -26,10 +27,18 @@ export class RecordComponent {
       maxLength: 10,
       debug: true
     });
+    this.recording = true;
   }
 
   stopRecording() {
     this._audioService.stopRecording();
-    this.wavBase64String = this._audioService.getAudioString();
+    this._audioService.callback = this.proccessAudioStringCallback.bind(this)
+    this.recording = false;
+    this.wavBase64String = this._audioService.processAudioString();
+  }
+
+  proccessAudioStringCallback(this, result){
+    this.wavBase64String = result;
+    this.audioEmitter.emit(this.wavBase64String);
   }
 }

@@ -10,7 +10,9 @@ export class AudioService {
   private bufferSize = 2048;
   private sampleRate = 0;
   public stream: MediaStream;
+  public callback = null;
 
+  
   stopRecording(): any {
     const stream = this.stream;
     stream.getAudioTracks().forEach(track => track.stop());
@@ -42,7 +44,7 @@ export class AudioService {
     }
   }
 
-  getAudioString() {
+  processAudioString() {
     if (this.stream) {
       return this.WAVProcessing();
     }
@@ -169,11 +171,11 @@ export class AudioService {
     const reader = new FileReader();
     reader.readAsDataURL(blob);
     reader.onloadend = this.wavBlobToBase64Callback.bind(this);
-    console.log('Does it get set');
+    
   }
 
   wavBlobToBase64Callback(this, event) {
     const base64Data = event.target.result.split(',')[1];
-    this.submitWav64String(base64Data);
+    this.callback(base64Data);
   }
 }

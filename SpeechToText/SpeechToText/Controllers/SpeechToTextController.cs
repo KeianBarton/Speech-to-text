@@ -20,12 +20,12 @@ namespace STTRest.Controllers
 
         [HttpPost]
         [Route("parseAzure")]
-        public IActionResult ParseSpeectToTextAzure(ClientWavObject clientInput)
+        public IActionResult ParseSpeectToTextAzure([FromBody] ClientWavObject clientInput)
         {
             var sw = new Stopwatch();
             sw.Start();
             
-            var input = new string []{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-US&format=detailed", "", null};
+            var input = new string []{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-US&format=detailed", clientInput.Base64String};
             var result = _azureSTTService.ParseSpeectToText(input);
 
             if (result == null)

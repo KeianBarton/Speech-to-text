@@ -1,12 +1,13 @@
 <div class="page-container">
   <div class="row">
-    <h1 class="col-12 text-center display-2 text-light font-weight-bold">{{title}}</h1></div>
-    <div class="row">
-      <div class="col">
-        <app-record (audioEmitter)="handleAudioChange($event)" class="row"></app-record>
-      </div>
+    <h1 class="col-12 text-center display-2 text-light font-weight-bold">{{title}}</h1>
+  </div>
+  <div class="row" *ngIf="wavBase64String==null">
+    <div class="col">
+      <app-record (audioEmitter)="handleAudioChange($event)" class="row"></app-record>
     </div>
-  <div class="row">
+  </div>
+  <div class="row" *ngIf="wavBase64String!=null">
     <app-aws [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4"></app-aws>
     <app-azure [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4"></app-azure>
     <app-watson [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4"></app-watson>
