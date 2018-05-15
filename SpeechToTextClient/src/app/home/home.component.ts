@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent {
   private title = 'Speech to Text Comparator';
-  private WavBase64String = '';
+  private wavBase64String :string = null;
 
   handleAudioChange(WavBase64String: string) {
-    this.WavBase64String = null;
-    this.WavBase64String = WavBase64String;
+    this.wavBase64String = null;
+    this.wavBase64String = WavBase64String;
   }
 }

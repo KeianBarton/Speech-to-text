@@ -3,15 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/angular.json" afterPath="$PROJECT_DIR$/../SpeechToTextClient/angular.json" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/app.component.css" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/app.component.css" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/app.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/app.component.html" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.css" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.css" />
+      <change beforePath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" afterPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" />
+      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" />
+      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" />
+      <change beforePath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" afterPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" />
       <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.html" />
+      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.ts" />
+      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.html" />
+      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.ts" />
+      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.html" />
+      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.ts" />
       <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.html" />
       <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.ts" />
+      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/models/recognition-Response.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/models/recognition-Response.ts" />
       <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/audio.service.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/audio.service.ts" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/styles.css" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/styles.css" />
+      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/speechtotext.service.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/speechtotext.service.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,74 +27,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4222874">
+    <splitter split-orientation="horizontal" split-proportion="0.46120688">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="SpeechToTextController.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="116">
-                  <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+                <state relative-caret-position="226">
+                  <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
                   <folding>
-                    <marker date="1526305675039" expanded="true" signature="6:83" ph="..." />
-                    <marker date="1526305675039" expanded="true" signature="115:2063" ph="{...}" />
-                    <marker date="1526305675039" expanded="true" signature="202:2061" ph="{...}" />
-                    <marker date="1526305675039" expanded="true" signature="440:558" ph="{...}" />
-                    <marker date="1526305675039" expanded="true" signature="689:1291" ph="{...}" />
-                    <marker date="1526305675039" expanded="true" signature="1043:1138" ph="{...}" />
-                    <marker date="1526305675039" expanded="true" signature="1443:1944" ph="{...}" />
-                    <marker date="1526305675039" expanded="true" signature="1696:1791" ph="{...}" />
-                    <marker date="1526305675039" expanded="true" signature="1982:2055" ph="{...}" />
+                    <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
+                    <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
+                    <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
+                    <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
+                    <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
+                    <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
+                    <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
+                    <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
+                    <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AzureSTTService.cs" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="716">
-                  <caret line="164" column="86" lean-forward="false" selection-start-line="164" selection-start-column="86" selection-end-line="164" selection-end-column="86" />
-                  <folding>
-                    <marker date="1526305866903" expanded="false" signature="6:170" ph="..." />
-                    <marker date="1526305866903" expanded="true" signature="199:6678" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="246:6676" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="386:6665" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="676:799" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="2059:4531" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2093:4277" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2223:4259" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2271:2406" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="2577:3179" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2632:2744" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="2929:3064" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="3205:3297" ph="/* Get the response from the service. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="3430:4237" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="3732:3857" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="3859:3965" ph="/* Console.WriteLine(responseString); ... */" />
-                    <marker date="1526305866903" expanded="true" signature="4059:4210" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4314:4455" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4480:4517" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4584:6629" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4718:6598" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4757:4890" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="5049:5603" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="5096:5200" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="5377:5500" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="5782:6577" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="6068:6181" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="6327:6554" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="WatsonSTTService.cs" pinned="false" current-in-tab="false">
+          <file leaf-file-name="WatsonSTTService.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Services/Services/WatsonSTTService.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
+                <state relative-caret-position="690">
                   <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
                   <folding>
                     <marker date="1526305805423" expanded="false" signature="6:380" ph="..." />
@@ -190,48 +155,35 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AzureSTTService.cs" pinned="false" current-in-tab="false">
+          <file leaf-file-name="AzureSTTService.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="164" column="22" lean-forward="false" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
+                <state relative-caret-position="182">
+                  <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
                   <folding>
-                    <marker date="1526305866903" expanded="false" signature="6:170" ph="..." />
-                    <marker date="1526305866903" expanded="true" signature="199:6678" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="246:6676" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="386:6665" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="676:799" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="2059:4531" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2093:4277" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2223:4259" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2271:2406" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="2577:3179" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="2632:2744" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="2929:3064" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="3205:3297" ph="/* Get the response from the service. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="3430:4237" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="3732:3857" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="3859:3965" ph="/* Console.WriteLine(responseString); ... */" />
-                    <marker date="1526305866903" expanded="true" signature="4059:4210" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4314:4455" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4480:4517" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4584:6629" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4718:6598" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="4757:4890" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="5049:5603" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="5096:5200" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-                    <marker date="1526305866903" expanded="true" signature="5377:5500" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="5782:6577" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="6068:6181" ph="{...}" />
-                    <marker date="1526305866903" expanded="true" signature="6327:6554" ph="{...}" />
+                    <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
+                    <marker date="1526370469827" expanded="true" signature="199:6806" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="246:6804" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="386:6793" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+                    <marker date="1526370469827" expanded="true" signature="676:799" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+                    <marker date="1526370469827" expanded="true" signature="2012:4659" ph="/* if (!string.IsNullOrEmpty(audioFile)) ... */" />
+                    <marker date="1526370469827" expanded="true" signature="4712:6757" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="4846:6726" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="4885:5018" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+                    <marker date="1526370469827" expanded="true" signature="5177:5731" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="5224:5328" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+                    <marker date="1526370469827" expanded="true" signature="5505:5628" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="5910:6705" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="6196:6309" ph="{...}" />
+                    <marker date="1526370469827" expanded="true" signature="6455:6682" ph="{...}" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SpeechRecognitionResult.cs" pinned="false" current-in-tab="true">
+          <file leaf-file-name="SpeechRecognitionResult.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="60">
@@ -310,10 +262,10 @@
         <option value="$PROJECT_DIR$/Services/IServices/IWatsonSTTService.cs" />
         <option value="$PROJECT_DIR$/Services/Startup.cs" />
         <option value="$PROJECT_DIR$/SpeechToText/Startup.cs" />
-        <option value="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" />
         <option value="$PROJECT_DIR$/Services/Services/WatsonSTTService.cs" />
         <option value="$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs" />
         <option value="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" />
+        <option value="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" />
       </list>
     </option>
   </component>
@@ -344,6 +296,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -355,18 +308,6 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Classes" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="SpeechToText (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="IServices" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -391,7 +332,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,12 +387,13 @@
       <workItem from="1525857839407" duration="2555000" />
       <workItem from="1526048074705" duration="4439000" />
       <workItem from="1526226594458" duration="5490000" />
-      <workItem from="1526301724502" duration="2575000" />
+      <workItem from="1526301724502" duration="3501000" />
+      <workItem from="1526369766303" duration="1248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19646000" />
+    <option name="totallyTimeSpent" value="21820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -475,7 +416,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17142858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -499,119 +440,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs</url>
-          <line>35</line>
-          <properties documentPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeectToTextController.cs" initialLine="23" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs</url>
-          <line>27</line>
-          <properties documentPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" initialLine="23">
-            <startOffsets>
-              <startOffset value="787" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="942" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" initialLine="46">
-            <startOffsets>
-              <startOffset value="1916" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="1934" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" initialLine="19">
-            <startOffsets>
-              <startOffset value="648" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="676" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs</url>
-          <line>57</line>
-          <properties documentPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" initialLine="56">
-            <startOffsets>
-              <startOffset value="2022" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="2059" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs</url>
-          <line>63</line>
-          <properties documentPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" initialLine="62">
-            <startOffsets>
-              <startOffset value="2244" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="2245" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs</url>
-          <line>129</line>
-          <properties documentPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" initialLine="128">
-            <startOffsets>
-              <startOffset value="4911" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="4932" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs</url>
-          <line>149</line>
-          <properties documentPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" initialLine="149">
-            <startOffsets>
-              <startOffset value="5730" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="5782" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs</url>
-          <line>26</line>
-          <properties documentPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" initialLine="25">
-            <startOffsets>
-              <startOffset value="813" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="876" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -666,15 +495,15 @@
         <state relative-caret-position="300">
           <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
-            <marker date="1526305675039" expanded="true" signature="6:83" ph="..." />
-            <marker date="1526305675039" expanded="true" signature="115:2063" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="202:2061" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="440:558" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="689:1291" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1043:1138" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1443:1944" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1696:1791" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1982:2055" ph="{...}" />
+            <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
+            <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -684,36 +513,23 @@
         <state relative-caret-position="495">
           <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding>
-            <marker date="1526305866903" expanded="false" signature="6:170" ph="..." />
-            <marker date="1526305866903" expanded="true" signature="199:6678" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="246:6676" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="386:6665" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
-            <marker date="1526305866903" expanded="true" signature="676:799" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2059:4531" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2093:4277" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2223:4259" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2271:2406" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2577:3179" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2632:2744" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2929:3064" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3205:3297" ph="/* Get the response from the service. ... */" />
-            <marker date="1526305866903" expanded="true" signature="3430:4237" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3732:3857" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3859:3965" ph="/* Console.WriteLine(responseString); ... */" />
-            <marker date="1526305866903" expanded="true" signature="4059:4210" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4314:4455" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4480:4517" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4584:6629" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4718:6598" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4757:4890" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5049:5603" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5096:5200" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5377:5500" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5782:6577" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6068:6181" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6327:6554" ph="{...}" />
+            <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
+            <marker date="1526370469827" expanded="true" signature="199:6806" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="246:6804" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="386:6793" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+            <marker date="1526370469827" expanded="true" signature="676:799" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+            <marker date="1526370469827" expanded="true" signature="2012:4659" ph="/* if (!string.IsNullOrEmpty(audioFile)) ... */" />
+            <marker date="1526370469827" expanded="true" signature="4712:6757" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4846:6726" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4885:5018" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5177:5731" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5224:5328" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5505:5628" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5910:6705" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6196:6309" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6455:6682" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -723,15 +539,15 @@
         <state relative-caret-position="345">
           <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding>
-            <marker date="1526305675039" expanded="true" signature="6:83" ph="..." />
-            <marker date="1526305675039" expanded="true" signature="115:2063" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="202:2061" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="440:558" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="689:1291" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1043:1138" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1443:1944" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1696:1791" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1982:2055" ph="{...}" />
+            <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
+            <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -826,36 +642,23 @@
         <state relative-caret-position="435">
           <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
           <folding>
-            <marker date="1526305866903" expanded="false" signature="6:170" ph="..." />
-            <marker date="1526305866903" expanded="true" signature="199:6678" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="246:6676" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="386:6665" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
-            <marker date="1526305866903" expanded="true" signature="676:799" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2059:4531" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2093:4277" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2223:4259" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2271:2406" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2577:3179" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2632:2744" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2929:3064" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3205:3297" ph="/* Get the response from the service. ... */" />
-            <marker date="1526305866903" expanded="true" signature="3430:4237" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3732:3857" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3859:3965" ph="/* Console.WriteLine(responseString); ... */" />
-            <marker date="1526305866903" expanded="true" signature="4059:4210" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4314:4455" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4480:4517" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4584:6629" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4718:6598" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4757:4890" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5049:5603" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5096:5200" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5377:5500" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5782:6577" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6068:6181" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6327:6554" ph="{...}" />
+            <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
+            <marker date="1526370469827" expanded="true" signature="199:6806" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="246:6804" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="386:6793" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+            <marker date="1526370469827" expanded="true" signature="676:799" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+            <marker date="1526370469827" expanded="true" signature="2012:4659" ph="/* if (!string.IsNullOrEmpty(audioFile)) ... */" />
+            <marker date="1526370469827" expanded="true" signature="4712:6757" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4846:6726" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4885:5018" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5177:5731" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5224:5328" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5505:5628" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5910:6705" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6196:6309" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6455:6682" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -865,15 +668,15 @@
         <state relative-caret-position="570">
           <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
           <folding>
-            <marker date="1526305675039" expanded="true" signature="6:83" ph="..." />
-            <marker date="1526305675039" expanded="true" signature="115:2063" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="202:2061" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="440:558" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="689:1291" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1043:1138" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1443:1944" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1696:1791" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1982:2055" ph="{...}" />
+            <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
+            <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -915,36 +718,23 @@
         <state relative-caret-position="330">
           <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="85" />
           <folding>
-            <marker date="1526305866903" expanded="false" signature="6:170" ph="..." />
-            <marker date="1526305866903" expanded="true" signature="199:6678" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="246:6676" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="386:6665" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
-            <marker date="1526305866903" expanded="true" signature="676:799" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2059:4531" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2093:4277" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2223:4259" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2271:2406" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2577:3179" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2632:2744" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2929:3064" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3205:3297" ph="/* Get the response from the service. ... */" />
-            <marker date="1526305866903" expanded="true" signature="3430:4237" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3732:3857" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3859:3965" ph="/* Console.WriteLine(responseString); ... */" />
-            <marker date="1526305866903" expanded="true" signature="4059:4210" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4314:4455" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4480:4517" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4584:6629" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4718:6598" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4757:4890" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5049:5603" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5096:5200" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5377:5500" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5782:6577" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6068:6181" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6327:6554" ph="{...}" />
+            <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
+            <marker date="1526370469827" expanded="true" signature="199:6806" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="246:6804" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="386:6793" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+            <marker date="1526370469827" expanded="true" signature="676:799" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+            <marker date="1526370469827" expanded="true" signature="2012:4659" ph="/* if (!string.IsNullOrEmpty(audioFile)) ... */" />
+            <marker date="1526370469827" expanded="true" signature="4712:6757" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4846:6726" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4885:5018" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5177:5731" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5224:5328" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5505:5628" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5910:6705" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6196:6309" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6455:6682" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1016,15 +806,15 @@
         <state relative-caret-position="570">
           <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
           <folding>
-            <marker date="1526305675039" expanded="true" signature="6:83" ph="..." />
-            <marker date="1526305675039" expanded="true" signature="115:2063" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="202:2061" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="440:558" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="689:1291" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1043:1138" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1443:1944" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1696:1791" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1982:2055" ph="{...}" />
+            <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
+            <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1054,36 +844,23 @@
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1526305866903" expanded="false" signature="6:170" ph="..." />
-            <marker date="1526305866903" expanded="true" signature="199:6678" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="246:6676" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="386:6665" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
-            <marker date="1526305866903" expanded="true" signature="676:799" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2059:4531" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2093:4277" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2223:4259" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2271:2406" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2577:3179" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2632:2744" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2929:3064" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3205:3297" ph="/* Get the response from the service. ... */" />
-            <marker date="1526305866903" expanded="true" signature="3430:4237" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3732:3857" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3859:3965" ph="/* Console.WriteLine(responseString); ... */" />
-            <marker date="1526305866903" expanded="true" signature="4059:4210" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4314:4455" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4480:4517" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4584:6629" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4718:6598" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4757:4890" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5049:5603" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5096:5200" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5377:5500" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5782:6577" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6068:6181" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6327:6554" ph="{...}" />
+            <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
+            <marker date="1526370469827" expanded="true" signature="199:6806" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="246:6804" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="386:6793" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+            <marker date="1526370469827" expanded="true" signature="676:799" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+            <marker date="1526370469827" expanded="true" signature="2012:4659" ph="/* if (!string.IsNullOrEmpty(audioFile)) ... */" />
+            <marker date="1526370469827" expanded="true" signature="4712:6757" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4846:6726" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4885:5018" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5177:5731" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5224:5328" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5505:5628" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5910:6705" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6196:6309" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6455:6682" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1199,24 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-          <folding>
-            <marker date="1526305675039" expanded="true" signature="6:83" ph="..." />
-            <marker date="1526305675039" expanded="true" signature="115:2063" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="202:2061" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="440:558" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="689:1291" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1043:1138" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1443:1944" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1696:1791" ph="{...}" />
-            <marker date="1526305675039" expanded="true" signature="1982:2055" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Services/IServices/IWatsonSTTService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1237,6 +996,17 @@
             <marker date="1526301643225" expanded="false" signature="6:89" ph="..." />
             <marker date="1526301643225" expanded="true" signature="119:239" ph="{...}" />
             <marker date="1526301643225" expanded="true" signature="159:237" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding>
+            <marker date="1526305477248" expanded="true" signature="25:306" ph="{...}" />
+            <marker date="1526305477248" expanded="true" signature="68:304" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1264,9 +1034,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
+          <folding>
+            <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
+            <marker date="1526370469827" expanded="true" signature="199:6806" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="246:6804" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="386:6793" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
+            <marker date="1526370469827" expanded="true" signature="676:799" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
+            <marker date="1526370469827" expanded="true" signature="2012:4659" ph="/* if (!string.IsNullOrEmpty(audioFile)) ... */" />
+            <marker date="1526370469827" expanded="true" signature="4712:6757" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4846:6726" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="4885:5018" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5177:5731" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5224:5328" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
+            <marker date="1526370469827" expanded="true" signature="5505:5628" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="5910:6705" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6196:6309" ph="{...}" />
+            <marker date="1526370469827" expanded="true" signature="6455:6682" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
+            <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Services/Services/WatsonSTTService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="690">
           <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding>
             <marker date="1526305805423" expanded="false" signature="6:380" ph="..." />
@@ -1275,56 +1089,6 @@
             <marker date="1526305805423" expanded="true" signature="739:2401" ph="{...}" />
             <marker date="1526305805423" expanded="true" signature="831:2364" ph="{...}" />
             <marker date="1526305805423" expanded="true" signature="2175:2349" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="164" column="22" lean-forward="false" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
-          <folding>
-            <marker date="1526305866903" expanded="false" signature="6:170" ph="..." />
-            <marker date="1526305866903" expanded="true" signature="199:6678" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="246:6676" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="386:6665" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="410:635" ph="/* Note: Sign up at https://azure.microsoft.com/en-us/try/cognitive-services/ to get a subscription key. ... */" />
-            <marker date="1526305866903" expanded="true" signature="676:799" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="1032:1138" ph="/* Input your own audio file or use read from a microphone stream directly. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2059:4531" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2093:4277" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2223:4259" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2271:2406" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2577:3179" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="2632:2744" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="2929:3064" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3205:3297" ph="/* Get the response from the service. ... */" />
-            <marker date="1526305866903" expanded="true" signature="3430:4237" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3732:3857" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="3859:3965" ph="/* Console.WriteLine(responseString); ... */" />
-            <marker date="1526305866903" expanded="true" signature="4059:4210" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4314:4455" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4480:4517" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4584:6629" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4718:6598" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="4757:4890" ph="/* Open a request stream and write 1024 byte chunks in the stream one at a time. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5049:5603" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5096:5200" ph="/* Read 1024 raw bytes from the input audio file. ... */" />
-            <marker date="1526305866903" expanded="true" signature="5377:5500" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="5782:6577" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6068:6181" ph="{...}" />
-            <marker date="1526305866903" expanded="true" signature="6327:6554" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services/Models/SpeechRecognitionResult.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <marker date="1526305477248" expanded="true" signature="25:306" ph="{...}" />
-            <marker date="1526305477248" expanded="true" signature="68:304" ph="{...}" />
           </folding>
         </state>
       </provider>

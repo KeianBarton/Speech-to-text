@@ -1,7 +1,11 @@
 <div class="m-4">
   <div class="col-md-12 text-center">
     <audio #audioElement controls class="card-img-top"></audio>
-    <a (click)="record()" class="btn btn-lg btn-dark" href="#">
-      <i class="fa fa-circle"></i></a>
+    <a *ngIf="!recording" (click)="startRecording()" class="btn btn-lg btn-dark" href="#">
+      <i class="fa fa-circle"></i>
+    </a>
+    <a *ngIf="recording" (click)="stopRecording()" class="btn btn-lg btn-dark" href="#">
+        <i class="fa fa-square"></i>
+      </a>
   </div>
 </div>

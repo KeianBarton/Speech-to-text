@@ -1,3 +1,31 @@
-<p>
-  azure works!
-</p>
+<div class="card" *ngIf="responseModel != null">
+    <div class="card-header">
+      Azure Speech to Text
+    </div>
+    <div class="card-body">
+      <div class="row">
+          <p class="card-text"> Total Time : {{responseModel.totalHttpTimeInMilliseconds}}
+      </div>
+      <div class="row">
+          <p class="card-text"> External Service Time : {{responseModel.externalServiceTimeInMilliseconds}}
+      </div>
+      <div class="row">
+          <p class="card-text"> Backend Time: {{responseModel.totalBackendTimeInMilliseconds}}
+      </div>
+      <div class="row">
+          <p class="card-text"> Result: {{responseModel.jsonResult.NBest[0].Display}}
+      </div>
+      <div class="row">
+          <p class="card-text"> Confidence: {{responseModel.jsonResult.NBest[0].Confidence}}
+      </div>
+    </div>
+  </div>
+  
+  <div class="card" *ngIf="responseModel == null">
+    <div class="card-header">
+      Azure Bing Speech
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Loading</h5>
+    </div>
+  </div>

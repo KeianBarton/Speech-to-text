@@ -7,6 +7,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -45,6 +46,7 @@ export class SpeechtotextService {
 
     return this._http.post<any>(this._apiRoot + 'parsewatson', body, options)
       .do(data => {
+        t1 = performance.now();
       })
       .map(data => {
         return this.processRecogntionModel(data, t1-t0);
@@ -53,14 +55,15 @@ export class SpeechtotextService {
   }
 
   processRecogntionModel(data, time){
-    let res = new RecognitionResponse();
-        res.StatusCode = data.StatusCode;
-        res.JSONResult = data.JSONResult;
-        res.ExternalServiceTimeInMilliseconds = data.ExternalServiceTimeInMilliseconds;
-        res.TotalBackendTimeInMilliseconds = data.TotalBackendTimeInMilliseconds;
-        res.TotalHttpTimeInMilliseconds = time;
+    let res = {
+        statusCode : data.statusCode,
+        jsonResult : JSON.parse(data.jsonResult),
+        externalServiceTimeInMilliseconds : data.externalServiceTimeInMilliseconds,
+        totalBackendTimeInMilliseconds : data.totalBackendTimeInMilliseconds,
+        totalHttpTimeInMilliseconds : time
+    }
 
-        return res
+    return res
   } 
 
   private handleError(err: HttpErrorResponse) {

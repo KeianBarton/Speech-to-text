@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SpeechtotextService } from '../../../../shared/services/speechtotext.service';
 
 @Component({
   selector: 'app-azure',
@@ -8,9 +9,17 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AzureComponent implements OnInit {
   @Input() private wavBase64String = '';
 
-  constructor() { }
+  constructor(private _speechToTextService: SpeechtotextService) { }
 
-  ngOnInit() {
+  responseModel : any = null;
+  
+  ngOnInit() {this._speechToTextService.postWAVAzure(this.wavBase64String).subscribe(
+    response => {  
+      this.responseModel = response;
+    }
+  );
+
   }
+
 
 }
