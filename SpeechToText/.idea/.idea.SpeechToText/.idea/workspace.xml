@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.SpeechToText/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" afterPath="$PROJECT_DIR$/Services/Services/AzureSTTService.cs" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.dll" />
-      <change beforePath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" afterPath="$PROJECT_DIR$/Services/bin/Debug/netcoreapp2.0/Services.pdb" />
-      <change beforePath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" afterPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.html" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/home.component.ts" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.html" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/azure/azure.component.ts" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.html" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/app/home/results/watson/watson.component.ts" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.html" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.html" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/components/record/record.component.ts" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/models/recognition-Response.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/models/recognition-Response.ts" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/audio.service.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/audio.service.ts" />
-      <change beforePath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/speechtotext.service.ts" afterPath="$PROJECT_DIR$/../SpeechToTextClient/src/shared/services/speechtotext.service.ts" />
-    </list>
+    <list default="true" id="76020a14-0b8a-4e00-8532-3ff6079130a5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +13,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.46120688">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SpeechToTextController.cs" pinned="false" current-in-tab="false">
+          <file leaf-file-name="SpeechToTextController.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+                <state relative-caret-position="144">
+                  <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
                   <folding>
                     <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
                     <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
@@ -50,7 +33,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="WatsonSTTService.cs" pinned="false" current-in-tab="true">
+          <file leaf-file-name="WatsonSTTService.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Services/Services/WatsonSTTService.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="690">
@@ -158,7 +141,7 @@
           <file leaf-file-name="AzureSTTService.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="182">
+                <state relative-caret-position="717">
                   <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
                   <folding>
                     <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
@@ -388,12 +371,12 @@
       <workItem from="1526048074705" duration="4439000" />
       <workItem from="1526226594458" duration="5490000" />
       <workItem from="1526301724502" duration="3501000" />
-      <workItem from="1526369766303" duration="1248000" />
+      <workItem from="1526369766303" duration="1407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21820000" />
+    <option name="totallyTimeSpent" value="21979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,7 +423,35 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="33" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" initialLine="24">
+            <startOffsets>
+              <startOffset value="723" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="748" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs" initialLine="37">
+            <startOffsets>
+              <startOffset value="1290" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1308" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1036,7 +1047,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Services/Services/AzureSTTService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="717">
           <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
           <folding>
             <marker date="1526370469827" expanded="false" signature="6:170" ph="..." />
@@ -1060,24 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
-            <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
-            <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
-            <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
-            <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
-            <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
-            <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
-            <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
-            <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Services/Services/WatsonSTTService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -1089,6 +1082,24 @@
             <marker date="1526305805423" expanded="true" signature="739:2401" ph="{...}" />
             <marker date="1526305805423" expanded="true" signature="831:2364" ph="{...}" />
             <marker date="1526305805423" expanded="true" signature="2175:2349" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpeechToText/Controllers/SpeechToTextController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <marker date="1526370669132" expanded="false" signature="6:83" ph="..." />
+            <marker date="1526370669132" expanded="true" signature="115:2090" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="202:2088" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="440:558" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="700:1318" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1070:1165" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1470:1971" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="1723:1818" ph="{...}" />
+            <marker date="1526370669132" expanded="true" signature="2009:2082" ph="{...}" />
           </folding>
         </state>
       </provider>
