@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SpeechtotextService } from '../../../../shared/services/speechtotext.service';
 
 @Component({
   selector: 'app-aws',
@@ -8,7 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AwsComponent implements OnInit {
   @Input() private wavBase64String = '';
 
-  constructor() { }
+  constructor(private _speechToTextService: SpeechtotextService) { }
+
+  responseModel: any = null;
+  error = false;
 
   ngOnInit() {
   }

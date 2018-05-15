@@ -11,15 +11,10 @@ export class AzureComponent implements OnInit {
 
   constructor(private _speechToTextService: SpeechtotextService) { }
 
-  responseModel : any = null;
-  
-  ngOnInit() {this._speechToTextService.postWAVAzure(this.wavBase64String).subscribe(
-    response => {  
-      this.responseModel = response;
-    }
-  );
+  responseModel: any = null;
+  error = false;
 
+  ngOnInit() {
   }
-
 
 }
