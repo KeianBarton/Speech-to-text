@@ -1,0 +1,41 @@
+.btn {
+    position: relative;
+    height: 96px;
+    width: 96px;
+    -webkit-box-shadow: 0px 0px 32px rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 0px 0px 32px rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 32px rgba(255, 255, 255, 0.25);
+}
+
+.btn > i {
+    color: #F1614E;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+}
+
+/* mobile phones */
+@media screen and (max-width: 992px) {
+    .btn {
+        height: 96px;
+        width: 96px;
+    }
+
+    .btn > i {
+        font-size: 48px;
+    }
+}
+
+/* iPads (portrait and landscape) */
+@media screen and (max-width: 600px) {
+    .btn {
+        height: 64px;
+        width: 64px;
+    }
+
+    .btn > i {
+        font-size: 36px;
+    }
+}

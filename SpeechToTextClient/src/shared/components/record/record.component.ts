@@ -10,10 +10,13 @@ export class RecordComponent implements OnInit{
 
   @ViewChild('audioElement')
   private audioElement: any;
-  private wavBase64String = '';
+  private wavBase64String :string = '';
+
   private recording: boolean = false;
   private volumeChannel1 : number = 0;
   private volumeChannel2 : number = 0;
+  private readyToReRecord : boolean = true;
+
 
   @Output() audioEmitter = new EventEmitter<string>();
 
@@ -47,8 +50,9 @@ export class RecordComponent implements OnInit{
     this.wavBase64String = this._audioService.processAudioString();
   }
 
-  proccessAudioStringCallback(this, result){
+  proccessAudioStringCallback(this, result) {
     this.wavBase64String = result;
+    this.readyToReRecord = false;
     this.audioEmitter.emit(this.wavBase64String);
   }
 

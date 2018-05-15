@@ -11,15 +11,18 @@ export class WatsonComponent implements OnInit {
 
   constructor(private _speechToTextService: SpeechtotextService) { }
 
-  responseModel : any = null;
-  
+  responseModel: any = null;
+  error = false;
+
   ngOnInit() {this._speechToTextService.postWAVWatson(this.wavBase64String).subscribe(
-    response => {  
+    response => {
       this.responseModel = response;
+    },
+    err => {
+      this.error = true;
     }
   );
 
   }
-
 
 }
