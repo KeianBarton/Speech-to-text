@@ -1,3 +1,31 @@
-<p>
-  aws works!
-</p>
+<div class="card" *ngIf="responseModel != null">
+  <div class="card-header">
+    Azure Speech to Text
+  </div>
+  <div class="card-body">
+    <div class="row">
+        <p class="card-text"> Total Time : ?
+    </div>
+    <div class="row">
+        <p class="card-text"> External Service Time : ?
+    </div>
+    <div class="row">
+        <p class="card-text"> Backend Time: ?
+    </div>
+    <div class="row">
+        <p class="card-text"> Result: ?
+    </div>
+    <div class="row">
+        <p class="card-text"> Confidence: ?
+    </div>
+  </div>
+</div>
+
+<div class="card" *ngIf="responseModel == null">
+  <div class="card-header">
+    AWS Speech
+  </div>
+  <div class="card-body">
+    <h1 class="card-title text-center"><i class="fa fa-spinner fa-spin"></i></h1>
+  </div>
+</div>

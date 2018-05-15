@@ -1,9 +1,16 @@
-#page-container {
-    background: #2F7684;
+#full-page-container {
+    max-height: 100vh;
 }
 
-#civica-logo {
-    height: auto;
-    max-width: 80%;
-    max-height: 96px;
+#main {
+    background: #52B77C;
+    flex: 1;
+    overflow-y: scroll;
+    -webkit-box-shadow: inset 0px 0px 128px rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: inset 0px 0px 128px rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0px 0px 128px rgba(255, 255, 255, 0.25);
+}
+
+footer {
+    background: #3E8A60;
 }

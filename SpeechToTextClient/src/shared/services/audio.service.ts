@@ -12,11 +12,12 @@ export class AudioService {
   public stream: MediaStream;
   public callback = null;
 
-  
   stopRecording(): any {
     const stream = this.stream;
-    stream.getAudioTracks().forEach(track => track.stop());
-    stream.getVideoTracks().forEach(track => track.stop());
+    if (stream) {
+      stream.getAudioTracks().forEach(track => track.stop());
+      stream.getVideoTracks().forEach(track => track.stop());
+    }
   }
 
   startRecording(config) {
@@ -171,7 +172,6 @@ export class AudioService {
     const reader = new FileReader();
     reader.readAsDataURL(blob);
     reader.onloadend = this.wavBlobToBase64Callback.bind(this);
-    
   }
 
   wavBlobToBase64Callback(this, event) {

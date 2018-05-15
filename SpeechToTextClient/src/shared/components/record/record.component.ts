@@ -11,7 +11,8 @@ export class RecordComponent {
   @ViewChild('audioElement')
   private audioElement: any;
   private wavBase64String = '';
-  private recording: boolean = false;
+  private recording = false;
+  private readyToReRecord = true;
 
   @Output() audioEmitter = new EventEmitter<string>();
 
@@ -37,8 +38,9 @@ export class RecordComponent {
     this.wavBase64String = this._audioService.processAudioString();
   }
 
-  proccessAudioStringCallback(this, result){
+  proccessAudioStringCallback(this, result) {
     this.wavBase64String = result;
+    this.readyToReRecord = false;
     this.audioEmitter.emit(this.wavBase64String);
   }
 }
