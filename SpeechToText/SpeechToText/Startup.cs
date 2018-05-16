@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Amazon;
+using Amazon.S3;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using STTRest.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
 
@@ -35,8 +38,8 @@ namespace STTRest
                         .AllowCredentials()
                         .WithExposedHeaders("x-custom-header"));
             });
-            
-            Services.Startup.ConfigureServices(services);
+
+            Services.Startup.ConfigureServices(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

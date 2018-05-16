@@ -38,7 +38,6 @@ namespace Services.Services
             
             
             string responseString;
-            FileStream fs;
             MemoryStream ms;
 
             var token = _authentication.GetAccessToken();

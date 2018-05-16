@@ -11,11 +11,14 @@ namespace STTRest.Controllers
 
         private readonly IAzureSTTService _azureSTTService;
         private readonly IWatsonSTTService _watsonSttService;
+        private readonly IAWSService _awsService;
 
-        public SpeechToTextController(IAzureSTTService azureSTTService, IWatsonSTTService watsonSttService)
+        public SpeechToTextController(IAzureSTTService azureSTTService, IWatsonSTTService watsonSttService, IAWSService awsService)
         {
             _azureSTTService = azureSTTService;
             _watsonSttService = watsonSttService;
+            _awsService = awsService;
+
         }
 
         [HttpPost]
@@ -54,6 +57,28 @@ namespace STTRest.Controllers
                 return BadRequest("An unknown error has occured");
             }
             
+            sw.Stop();
+            result.TotalBackendTimeInMilliseconds = sw.ElapsedMilliseconds;
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("parseAWS")]
+        public IActionResult ParseSpeectToTextAWS([FromBody] ClientWavObject clientInput)
+        {
+
+            var sw = new Stopwatch();
+            sw.Start();
+
+            var input = new string[] { clientInput.Base64String };
+            //var result = _watsonSttService.ParseSpeectToText(input);
+            var res = _awsService.ParseSpeectToText();
+
+            if (result == null)
+            {
+                return BadRequest("An unknown error has occured");
+            }
+
             sw.Stop();
             result.TotalBackendTimeInMilliseconds = sw.ElapsedMilliseconds;
             return Ok(result);
