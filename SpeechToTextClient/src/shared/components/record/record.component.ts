@@ -1,4 +1,4 @@
-import { Component, ViewChild, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, ViewChild, Output, EventEmitter, OnInit, NgZone } from '@angular/core';
 import { AudioService } from '../../services/audio.service';
 
 @Component({
@@ -6,30 +6,40 @@ import { AudioService } from '../../services/audio.service';
   templateUrl: './record.component.html',
   styleUrls: ['./record.component.css']
 })
-export class RecordComponent implements OnInit{
+export class RecordComponent implements OnInit {
 
   @ViewChild('audioElement')
   private audioElement: any;
-  private wavBase64String :string = '';
+  private wavBase64String: string = '';
 
   private recording: boolean = false;
-  private volumeChannel1 : number = 0;
-  private volumeChannel2 : number = 0;
-  private readyToReRecord : boolean = true;
+  private visulisationValues: number[] = null;
+  private barWidth: number = 1;
+
+  private readyToReRecord: boolean = true;
 
 
   @Output() audioEmitter = new EventEmitter<string>();
 
   constructor(
-    private _audioService: AudioService
-  ) {}
+    private _audioService: AudioService,
+    private _ngZone: NgZone
+  ) { }
 
-  ngOnInit(){
-    this._audioService.visulisationCallback = function(channel1, channel2){
-      this.volumeChannel1 = channel1;
-      this.volumeChannel2 = channel2;
-      console.log("Channel 1: " + channel1 + "   Channel 2: " + channel2)
-    }
+  ngOnInit() {
+    this._audioService.visulisationCallback = this.visualisationCallback.bind(this);
+  }
+
+  visualisationCallback(this, res) {
+    var i = 0;
+    this._ngZone.run(() => {
+      var divider = 16;
+      var widthDivision = res.length / divider;
+      this.barWidth = Math.round((100 / widthDivision) - 2);
+      this.visualisationValues = res.filter(function (value, index, Arr) {
+        return index % divider == 0;
+      });;
+    });
   }
 
   startRecording() {

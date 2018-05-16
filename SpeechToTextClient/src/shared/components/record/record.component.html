@@ -1,3 +1,7 @@
+<div class="row sound-bar">
+    <div *ngFor="let bar of visualisationValues" class="adjustable-bar" [style.height.%]="bar" [style.width.%]="barWidth"></div>
+</div>
+
 <div class="m-4 text-center">
   <!--<audio #audioElement controls></audio>-->
   <a *ngIf="!recording" [ngClass]="{disabled: !readyToReRecord}" (click)="startRecording()" class="btn btn-light rounded-circle">

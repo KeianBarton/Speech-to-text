@@ -7,13 +7,15 @@ export class AudioService {
 
   public stream: MediaStream;
   public visulisationCallback : any = null;
+  public callback = null;
 
   private leftchannel: any = new Array;
   private rightchannel: any = new Array;
   private recordingLength = 0;
   private bufferSize = 2048;
   private sampleRate = 0;
-  public callback = null;
+  
+  private processor : any = null; 
   private context : AudioContext = null;
   private analyser : AnalyserNode = null;
   private analyser2 : AnalyserNode = null;
@@ -24,6 +26,11 @@ export class AudioService {
       stream.getAudioTracks().forEach(track => track.stop());
       stream.getVideoTracks().forEach(track => track.stop());
     }
+
+    this.processor.onaudioprocess = null;
+    this.processor = null;
+    this.analyser = null;
+    this.analyser2 = null;
   }
 
   startRecording(config) {
@@ -92,12 +99,12 @@ export class AudioService {
     source.connect(this.analyser);
     source.connect(this.analyser2);
 
-    const processor = this.context.createScriptProcessor(bufferSize, 2, 2);
-    volume.connect(processor);
-    this.analyser.connect(processor);
-    processor.connect(this.context.destination);
+    this.processor = this.context.createScriptProcessor(bufferSize, 2, 2);
+    volume.connect(this.processor);
+    this.analyser.connect(this.processor);
+    this.processor.connect(this.context.destination);
 
-    processor.onaudioprocess = this.generateSounds.bind(this, bufferSize);
+    this.processor.onaudioprocess = this.generateSounds.bind(this, bufferSize);
 
     
   }
@@ -117,6 +124,20 @@ export class AudioService {
   }
 
   generateVisulisation(){
+      var res = this.generateSpectrum();
+      // var res = this.generateTwoChannelVolumneData();
+      if (this.visulisationCallback != null){
+        this.visulisationCallback(res);
+      }
+  }
+
+  generateSpectrum(){
+    var array =  new Uint8Array(this.analyser.frequencyBinCount);
+    this.analyser.getByteFrequencyData(array);
+    return array;
+  }
+
+  generateTwoChannelVolumneData(){
       var array =  new Uint8Array(this.analyser.frequencyBinCount);
       this.analyser.getByteFrequencyData(array);
       var average = this.getAverageVolume(array);
@@ -126,9 +147,7 @@ export class AudioService {
       this.analyser2.getByteFrequencyData(array2);
       var average2 = this.getAverageVolume(array2)
 
-      if (this.visulisationCallback != null){
-        this.visulisationCallback(average, average2);
-      }
+      return [average, average2];
   }
 
   getAverageVolume(array) {
