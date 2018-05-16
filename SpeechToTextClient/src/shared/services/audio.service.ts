@@ -4,13 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AudioService {
+
+  public stream: MediaStream;
+  public visulisationCallback : any = null;
+  public callback = null;
+
   private leftchannel: any = new Array;
   private rightchannel: any = new Array;
   private recordingLength = 0;
   private bufferSize = 2048;
   private sampleRate = 0;
-  public stream: MediaStream;
-  public callback = null;
+  
+  private processor : any = null; 
+  private context : AudioContext = null;
+  private analyser : AnalyserNode = null;
+  private analyser2 : AnalyserNode = null;
 
   stopRecording(): any {
     const stream = this.stream;
@@ -18,6 +26,11 @@ export class AudioService {
       stream.getAudioTracks().forEach(track => track.stop());
       stream.getVideoTracks().forEach(track => track.stop());
     }
+
+    this.processor.onaudioprocess = null;
+    this.processor = null;
+    this.analyser = null;
+    this.analyser2 = null;
   }
 
   startRecording(config) {
@@ -53,22 +66,47 @@ export class AudioService {
 
   handleSuccess() {
     const stream = this.stream;
-    const context = new AudioContext();
-    const sampleRate = context.sampleRate;
-    const volume = context.createGain();
+    this.context = new AudioContext();
+    
+    const sampleRate = this.context.sampleRate;
+    const volume = this.context.createGain();
 
-    const source = context.createMediaStreamSource(stream);
+    const source = this.context.createMediaStreamSource(stream);
     const bufferSize = this.bufferSize;
     this.sampleRate = sampleRate;
 
+    this.analyser = this.context.createAnalyser();
+    this.analyser.smoothingTimeConstant =0.3;
+    this.analyser.fftSize = 1024;
+
+    this.analyser2 = this.context.createAnalyser();
+    this.analyser2.smoothingTimeConstant =0.3;
+    this.analyser2.fftSize = 1024;
+
+    // create a buffer source node
+    let sourceNode = this.context.createBufferSource();
+    let splitter = this.context.createChannelSplitter();
+
+    // connect the source to the analyser and the splitter
+    sourceNode.connect(splitter);
+
+    // connect one of the outputs from the splitter to
+    // the analyser
+    splitter.connect(this.analyser,0,0);
+    splitter.connect(this.analyser2,1,0);
+
     source.connect(volume);
+    source.connect(this.analyser);
+    source.connect(this.analyser2);
 
-    const processor = context.createScriptProcessor(bufferSize, 2, 2);
+    this.processor = this.context.createScriptProcessor(bufferSize, 2, 2);
+    volume.connect(this.processor);
+    this.analyser.connect(this.processor);
+    this.processor.connect(this.context.destination);
 
-    processor.onaudioprocess = this.generateSounds.bind(this, bufferSize);
+    this.processor.onaudioprocess = this.generateSounds.bind(this, bufferSize);
 
-    volume.connect(processor);
-    processor.connect(context.destination);
+    
   }
 
   generateSounds(this, bufferSize, e) {
@@ -79,7 +117,53 @@ export class AudioService {
     this.leftchannel.push(new Float32Array(left));
     this.rightchannel.push(new Float32Array(right));
     this.recordingLength += bufferSize;
+
+    if (this.visulisationCallback != null){
+        this.generateVisulisation()
+    }
   }
+
+  generateVisulisation(){
+      var res = this.generateSpectrum();
+      // var res = this.generateTwoChannelVolumneData();
+      if (this.visulisationCallback != null){
+        this.visulisationCallback(res);
+      }
+  }
+
+  generateSpectrum(){
+    var array =  new Uint8Array(this.analyser.frequencyBinCount);
+    this.analyser.getByteFrequencyData(array);
+    return array;
+  }
+
+  generateTwoChannelVolumneData(){
+      var array =  new Uint8Array(this.analyser.frequencyBinCount);
+      this.analyser.getByteFrequencyData(array);
+      var average = this.getAverageVolume(array);
+
+      // get the average for the second channel
+      var array2 =  new Uint8Array(this.analyser2.frequencyBinCount);
+      this.analyser2.getByteFrequencyData(array2);
+      var average2 = this.getAverageVolume(array2)
+
+      return [average, average2];
+  }
+
+  getAverageVolume(array) {
+    var values = 0;
+    var average;
+
+    var length = array.length;
+
+    // get all the frequency amplitudes
+    for (var i = 0; i < length; i++) {
+        values += array[i];
+    }
+
+    average = values / length;
+    return average;
+}
 
   mergeBuffers(channelBuffer, recordingLength) {
     const result = new Float32Array(recordingLength);
