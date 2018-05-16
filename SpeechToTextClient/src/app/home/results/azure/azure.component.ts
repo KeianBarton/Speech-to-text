@@ -21,7 +21,8 @@ export class AzureComponent implements OnInit {
       },
       err => {
         this.error = true;
-      })
+      }
+    );
   }
 
 }

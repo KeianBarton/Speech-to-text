@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AudioService {
 
   public stream: MediaStream;
-  public visulisationCallback : any = null;
+  public visulisationCallback: any = null;
   public callback = null;
 
   private leftchannel: any = new Array;
@@ -14,11 +14,11 @@ export class AudioService {
   private recordingLength = 0;
   private bufferSize = 2048;
   private sampleRate = 0;
-  
-  private processor : any = null; 
-  private context : AudioContext = null;
-  private analyser : AnalyserNode = null;
-  private analyser2 : AnalyserNode = null;
+
+  private processor: any = null;
+  private context: AudioContext = null;
+  private analyser: AnalyserNode = null;
+  private analyser2: AnalyserNode = null;
 
   stopRecording(): any {
     const stream = this.stream;
@@ -67,7 +67,7 @@ export class AudioService {
   handleSuccess() {
     const stream = this.stream;
     this.context = new AudioContext();
-    
+
     const sampleRate = this.context.sampleRate;
     const volume = this.context.createGain();
 
@@ -76,24 +76,24 @@ export class AudioService {
     this.sampleRate = sampleRate;
 
     this.analyser = this.context.createAnalyser();
-    this.analyser.smoothingTimeConstant =0.3;
+    this.analyser.smoothingTimeConstant = 0.3;
     this.analyser.fftSize = 1024;
 
     this.analyser2 = this.context.createAnalyser();
-    this.analyser2.smoothingTimeConstant =0.3;
+    this.analyser2.smoothingTimeConstant = 0.3;
     this.analyser2.fftSize = 1024;
 
     // create a buffer source node
-    let sourceNode = this.context.createBufferSource();
-    let splitter = this.context.createChannelSplitter();
+    const sourceNode = this.context.createBufferSource();
+    const splitter = this.context.createChannelSplitter();
 
     // connect the source to the analyser and the splitter
     sourceNode.connect(splitter);
 
     // connect one of the outputs from the splitter to
     // the analyser
-    splitter.connect(this.analyser,0,0);
-    splitter.connect(this.analyser2,1,0);
+    splitter.connect(this.analyser, 0, 0);
+    splitter.connect(this.analyser2, 1, 0);
 
     source.connect(volume);
     source.connect(this.analyser);
@@ -106,7 +106,7 @@ export class AudioService {
 
     this.processor.onaudioprocess = this.generateSounds.bind(this, bufferSize);
 
-    
+
   }
 
   generateSounds(this, bufferSize, e) {
@@ -118,46 +118,45 @@ export class AudioService {
     this.rightchannel.push(new Float32Array(right));
     this.recordingLength += bufferSize;
 
-    if (this.visulisationCallback != null){
-        this.generateVisulisation()
+    if (this.visulisationCallback != null) {
+        this.generateVisulisation();
     }
   }
 
-  generateVisulisation(){
-      var res = this.generateSpectrum();
-      // var res = this.generateTwoChannelVolumneData();
-      if (this.visulisationCallback != null){
+  generateVisulisation() {
+      const res = this.generateSpectrum();
+      if (this.visulisationCallback != null) {
         this.visulisationCallback(res);
       }
   }
 
-  generateSpectrum(){
-    var array =  new Uint8Array(this.analyser.frequencyBinCount);
+  generateSpectrum() {
+    const array =  new Uint8Array(this.analyser.frequencyBinCount);
     this.analyser.getByteFrequencyData(array);
     return array;
   }
 
-  generateTwoChannelVolumneData(){
-      var array =  new Uint8Array(this.analyser.frequencyBinCount);
+  generateTwoChannelVolumneData() {
+      const array =  new Uint8Array(this.analyser.frequencyBinCount);
       this.analyser.getByteFrequencyData(array);
-      var average = this.getAverageVolume(array);
+      const average = this.getAverageVolume(array);
 
       // get the average for the second channel
-      var array2 =  new Uint8Array(this.analyser2.frequencyBinCount);
+      const array2 =  new Uint8Array(this.analyser2.frequencyBinCount);
       this.analyser2.getByteFrequencyData(array2);
-      var average2 = this.getAverageVolume(array2)
+      const average2 = this.getAverageVolume(array2);
 
       return [average, average2];
   }
 
   getAverageVolume(array) {
-    var values = 0;
-    var average;
+    let values = 0;
+    let average;
 
-    var length = array.length;
+    const length = array.length;
 
     // get all the frequency amplitudes
-    for (var i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) {
         values += array[i];
     }
 

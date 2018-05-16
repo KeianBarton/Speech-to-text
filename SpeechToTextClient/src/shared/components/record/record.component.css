@@ -8,7 +8,6 @@
 }
 
 .btn > i {
-    color: #F1614E;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -16,20 +15,8 @@
     font-size: 48px;
 }
 
-.sound-bar{
-    height:100px;
-    display: flex;
-  align-items: flex-end;
-}
-
-.adjustable-bar{
-    min-height:1%;
-    max-height:100%;
-    background-color: #3E8A60;
-    /* width: 48%; */
-    margin:1%;
-    /* position: absolute; */
-    bottom:0;
+.btn > .fa-circle {
+    color: #F1614E;
 }
 
 /* mobile phones */
@@ -54,4 +41,17 @@
     .btn > i {
         font-size: 36px;
     }
+}
+
+#sound-bar{
+    display: flex;
+    align-items: flex-end;
+    height: 128px;
+    flex: 1;
+}
+
+.adjustable-bar{
+    min-height: 0%;
+    max-height: 100%;
+    background: #3E8A60;
 }

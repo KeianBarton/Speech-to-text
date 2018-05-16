@@ -3,9 +3,9 @@
     <h1 class="col h-100 text-light responsive-sizing">{{title}}</h1>
   </div>
   <div id="record-container" class="row align-items-center">
-    <app-record (audioEmitter)="handleAudioChange($event)" class="mx-auto"></app-record>
+    <app-record (audioEmitter)="handleAudioChange($event)" class="col"></app-record>
   </div>
-  <div id="results-container" class="row mt-2 mb-2" *ngIf="wavBase64String!=null">
+  <div id="results-container" class="row mt-2 mb-2" *ngIf="wavBase64String!=''">
     <app-aws [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4 mb-4"></app-aws>
     <app-azure [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4 mb-4"></app-azure>
     <app-watson [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4 mb-4"></app-watson>
