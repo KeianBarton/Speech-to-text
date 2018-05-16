@@ -8,12 +8,15 @@
 }
 
 .btn > i {
-    color: #F1614E;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 48px;
+}
+
+.btn > .fa-circle {
+    color: #F1614E;
 }
 
 .sound-bar{

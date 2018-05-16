@@ -10,14 +10,11 @@ export class RecordComponent implements OnInit {
 
   @ViewChild('audioElement')
   private audioElement: any;
-  private wavBase64String: string = '';
-
-  private recording: boolean = false;
+  private wavBase64String = '';
+  private recording = false;
+  private completed = false;
   private visulisationValues: number[] = null;
-  private barWidth: number = 1;
-
-  private readyToReRecord: boolean = true;
-
+  private barWidth = 1;
 
   @Output() audioEmitter = new EventEmitter<string>();
 
@@ -31,14 +28,14 @@ export class RecordComponent implements OnInit {
   }
 
   visualisationCallback(this, res) {
-    var i = 0;
+    const i = 0;
     this._ngZone.run(() => {
-      var divider = 16;
-      var widthDivision = res.length / divider;
+      const divider = 16;
+      const widthDivision = res.length / divider;
       this.barWidth = Math.round((100 / widthDivision) - 2);
       this.visualisationValues = res.filter(function (value, index, Arr) {
-        return index % divider == 0;
-      });;
+        return index % divider === 0;
+      });
     });
   }
 
@@ -55,14 +52,14 @@ export class RecordComponent implements OnInit {
 
   stopRecording() {
     this._audioService.stopRecording();
-    this._audioService.callback = this.proccessAudioStringCallback.bind(this)
+    this._audioService.callback = this.proccessAudioStringCallback.bind(this);
     this.recording = false;
     this.wavBase64String = this._audioService.processAudioString();
   }
 
   proccessAudioStringCallback(this, result) {
     this.wavBase64String = result;
-    this.readyToReRecord = false;
+    this.completed = true;
     this.audioEmitter.emit(this.wavBase64String);
   }
 
