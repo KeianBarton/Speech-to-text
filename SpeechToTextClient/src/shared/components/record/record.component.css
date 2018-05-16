@@ -19,20 +19,21 @@
     color: #F1614E;
 }
 
-.sound-bar{
-    height:100px;
+#sound-bar{
     display: flex;
-  align-items: flex-end;
+    align-items: center;
+    height: 128px;
+    flex: 1;
+}
+
+#button-container {
+    flex: 2;
 }
 
 .adjustable-bar{
-    min-height:1%;
-    max-height:100%;
-    background-color: #3E8A60;
-    /* width: 48%; */
-    margin:1%;
-    /* position: absolute; */
-    bottom:0;
+    min-height: 0%;
+    max-height: 100%;
+    background: #3E8A60;
 }
 
 /* mobile phones */
