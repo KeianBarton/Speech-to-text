@@ -19,23 +19,6 @@
     color: #F1614E;
 }
 
-#sound-bar{
-    display: flex;
-    align-items: center;
-    height: 128px;
-    flex: 1;
-}
-
-#button-container {
-    flex: 2;
-}
-
-.adjustable-bar{
-    min-height: 0%;
-    max-height: 100%;
-    background: #3E8A60;
-}
-
 /* mobile phones */
 @media screen and (max-width: 992px) {
     .btn {
@@ -58,4 +41,17 @@
     .btn > i {
         font-size: 36px;
     }
+}
+
+#sound-bar{
+    display: flex;
+    align-items: flex-end;
+    height: 128px;
+    flex: 1;
+}
+
+.adjustable-bar{
+    min-height: 0%;
+    max-height: 100%;
+    background: #3E8A60;
 }

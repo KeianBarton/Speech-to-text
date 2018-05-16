@@ -32,7 +32,7 @@ export class RecordComponent implements OnInit {
     const i = 0;
     this._ngZone.run(() => {
       // 512 frequency channels that can be displayed (with values 1-255 UInt8)
-      const divider = 1;
+      const divider = 2;
       this.barWidth = (100 / (res.length / divider)) - 2 * this.barGap;
 
       this.visualisationValues = res
@@ -70,12 +70,10 @@ export class RecordComponent implements OnInit {
         }
       )
       .filter(
-        // We split into 128 bars:
         function (value, index, Arr) {
           return index % divider === 0;
         }
       );
-      console.log(this.visualisationValues);
     });
   }
 

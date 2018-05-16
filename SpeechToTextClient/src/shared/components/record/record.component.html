@@ -4,15 +4,15 @@
       [style.height.%]="bar" [style.width.%]="barWidth"
       [style.marginRight.%]="barGap"></div>
   </div>
-  <div id="button-container" *ngIf="!completed">
-    <a *ngIf="recording" (click)="stopRecording()" class="btn btn-light rounded-circle">
+  <div id="button-container" class="m-5">
+    <a *ngIf="recording&&!completed" (click)="stopRecording()" class="btn btn-light rounded-circle">
       <i class="fa fa-square"></i>
     </a>
-    <a *ngIf="!recording" (click)="startRecording()" class="btn btn-light rounded-circle">
+    <a *ngIf="!recording&&!completed" (click)="startRecording()" class="btn btn-light rounded-circle">
       <i class="fa fa-circle"></i>
     </a>
+    <a *ngIf="completed" (click)="restart()" class="btn btn-light rounded-circle">
+      <i class="fa fa-repeat"></i>
+    </a>
   </div>
-  <a *ngIf="completed" (click)="restart()" class="btn btn-light rounded-circle">
-    <i class="fa fa-repeat"></i>
-  </a>
 </div>
