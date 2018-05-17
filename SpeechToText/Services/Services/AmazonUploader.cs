@@ -71,6 +71,21 @@ namespace Services.Services
             return null;
         }
 
+        public async Task<bool> DeleteFile(string filename)
+        {
+            try
+            {
+                var res = await _amazonS3Client.DeleteObjectAsync(_bucketName, filename);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            return false;
+        }
+
         public class S3UploadResponse
         {
             public string BucketName { get; set; }

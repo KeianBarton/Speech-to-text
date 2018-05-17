@@ -80,6 +80,9 @@ namespace Services.Services
                     //jsonRes = wc.(jobRes.TranscriptionJob.Transcript.TranscriptFileUri);
                 }
 
+                // Once done delete the file
+                await _amazonUploaderService.DeleteFile(uploadDetails.FileRoute);
+
                 return new SpeechRecognitionResult()
                 {
                     StatusCode = 200,

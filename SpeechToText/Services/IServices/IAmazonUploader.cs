@@ -9,6 +9,7 @@ namespace Services.IServices
 {
     public interface IAmazonUploader
     {
-       Task<AmazonUploader.S3UploadResponse> UploadBase64Wav(string base64);
+        Task<AmazonUploader.S3UploadResponse> UploadBase64Wav(string base64);
+        Task<bool> DeleteFile(string filename);
     }
 }
