@@ -27,8 +27,10 @@ export class AudioService {
       stream.getVideoTracks().forEach(track => track.stop());
     }
 
-    this.processor.onaudioprocess = null;
-    this.processor = null;
+    if (this.processor) {
+      this.processor.onaudioprocess = null;
+      this.processor = null;
+    }
     this.analyser = null;
     this.analyser2 = null;
   }
