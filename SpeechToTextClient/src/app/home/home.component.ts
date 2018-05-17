@@ -6,7 +6,7 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   animations: [
-    trigger('flyInOut', [
+    trigger('flyInOutWithFade', [
       state('in', style({transform: 'translateY(0)'})),
       transition(':enter', [
         animate('600ms ease-in', keyframes([
@@ -17,6 +17,36 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
       ]),
       transition(':leave', [
         animate('300ms ease-out', keyframes([
+          style({opacity: 1, transform: 'translateY(0)', offset: 0}),
+          style({opacity: 0, transform: 'translateY(5%)', offset: 1})
+        ]))
+      ])
+    ]),
+    trigger('flyInOutTop', [
+      state('in', style({transform: 'translateY(0)'})),
+      transition(':enter', [
+        animate('600ms ease-in', keyframes([
+          style({transform: 'translateY(-100%)', offset: 0}),
+          style({transform: 'translateY(0)', offset: 1})
+        ]))
+      ]),
+      transition(':leave', [
+        animate('600ms ease-out', keyframes([
+          style({opacity: 1, transform: 'translateY(0)', offset: 0}),
+          style({opacity: 0, transform: 'translateY(-100%)', offset: 1})
+        ]))
+      ])
+    ]),
+    trigger('slideInOutBottom', [
+      state('in', style({transform: 'translateY(0)'})),
+      transition(':enter', [
+        animate('600ms ease-in', keyframes([
+          style({opacity: 0, transform: 'translateY(5%)', offset: 0}),
+          style({opacity: 1, transform: 'translateY(0)', offset: 1})
+        ]))
+      ]),
+      transition(':leave', [
+        animate('600ms ease-out', keyframes([
           style({opacity: 1, transform: 'translateY(0)', offset: 0}),
           style({opacity: 0, transform: 'translateY(5%)', offset: 1})
         ]))
