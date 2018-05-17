@@ -14,3 +14,24 @@
 footer {
     background: #3E8A60;
 }
+
+img {
+    height: 3rem;
+    margin: 1.5rem 0;
+}
+
+/* mobile phones */
+@media screen and (max-width: 992px) {
+    img {
+        height: 2.75rem;
+        margin: 1.25rem 0;
+    }
+}
+
+/* iPads (portrait and landscape) */
+@media screen and (max-width: 600px) {
+    img {
+        height: 2.5rem;
+        margin: 1rem 0;
+    }
+}

@@ -2,27 +2,3 @@
 html, body, .page-container { 
     height: 100%;
 }
-
-.responsive-sizing {
-    height: 3rem;
-    font-size: 3rem;
-    margin: 1.5rem 0;
-}
-
-/* mobile phones */
-@media screen and (max-width: 992px) {
-    .responsive-sizing {
-        height: 2.75rem;
-        font-size: 2.75rem;
-        margin: 1.25rem 0;
-    }
-}
-
-/* iPads (portrait and landscape) */
-@media screen and (max-width: 600px) {
-    .responsive-sizing {
-        height: 2.5rem;
-        font-size: 2.5rem;
-        margin: 1rem 0;
-    }
-}

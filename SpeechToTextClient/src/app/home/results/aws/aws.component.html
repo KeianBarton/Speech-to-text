@@ -26,6 +26,7 @@
     AWS Speech
   </div>
   <div class="card-body">
-    <h1 class="card-title text-center"><i class="fa fa-spinner fa-spin"></i></h1>
+    <h1 *ngIf="!error" class="card-title text-center"><i class="fa fa-spinner fa-spin"></i></h1>
+    <h5 *ngIf="error" class="card-title text-center">Could not obtain data</h5>
   </div>
 </div>

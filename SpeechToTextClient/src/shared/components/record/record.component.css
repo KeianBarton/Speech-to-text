@@ -45,7 +45,7 @@
 
 #sound-bar{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     height: 128px;
     flex: 1;
 }

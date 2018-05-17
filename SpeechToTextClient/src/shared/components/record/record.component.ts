@@ -13,11 +13,12 @@ export class RecordComponent implements OnInit {
   private wavBase64String = '';
   private recording = false;
   private completed = false;
-  private visulisationValues = new Array<number>();
+  private visualisationValues = new Array<number>();
   private barWidth = 1;
   private barGap = 0;
 
   @Output() audioEmitter = new EventEmitter<string>();
+  @Output() completedEmitter = new EventEmitter<boolean>();
 
   constructor(
     private _audioService: AudioService,
@@ -99,10 +100,17 @@ export class RecordComponent implements OnInit {
     this.wavBase64String = result;
     this.completed = true;
     this.audioEmitter.emit(this.wavBase64String);
+    this.completedEmitter.emit(this.completed);
   }
 
   restart() {
+    const self = this;
+    this._ngZone.run(() => {
+      self.visualisationValues = new Array<number>();
+    });
     this.completed = false;
-    this.audioEmitter.emit('');
+    this.wavBase64String = '';
+    this.audioEmitter.emit(this.wavBase64String);
+    this.completedEmitter.emit(this.completed);
   }
 }

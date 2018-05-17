@@ -105,8 +105,6 @@ export class AudioService {
     this.processor.connect(this.context.destination);
 
     this.processor.onaudioprocess = this.generateSounds.bind(this, bufferSize);
-
-
   }
 
   generateSounds(this, bufferSize, e) {
