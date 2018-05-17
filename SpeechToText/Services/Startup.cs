@@ -14,6 +14,8 @@ namespace Services
             services.AddTransient<IWatsonSTTService, WatsonSTTService>();
             services.AddTransient<IAWSService, AWSService>();
 
+            services.AddTransient<IAmazonUploader, AmazonUploader>();
+
             var x = configuration.GetAWSOptions();
             services.AddDefaultAWSOptions(configuration.GetAWSOptions());
             services.AddAWSService<IAmazonS3>();

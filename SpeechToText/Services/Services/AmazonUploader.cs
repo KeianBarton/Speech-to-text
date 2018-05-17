@@ -1,40 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
 using System.Threading.Tasks;
-using Amazon;
 using Amazon.Runtime.SharedInterfaces;
 using Amazon.S3;
-using Amazon.S3.Transfer;
-using Microsoft.AspNetCore.Hosting;
+using Amazon.S3.Model;
+using Amazon.S3.Util;
+using Services.IServices;
 
-namespace Services.Classes
+namespace Services.Services
 {
-    public class AmazonUploader
+    public class AmazonUploader : IAmazonUploader
     {
-        private IHostingEnvironment _hostingEnvironment;
-        private ICoreAmazonS3 _amazonS3Client; 
+        private IAmazonS3 _amazonS3Client; 
         private string _bucketName = "speechtotextcomparison2";
+        private string _newBucketTest = "testbucketx746e73w12";
         private static readonly string BucketSubdirectory = String.Empty;
 
-        public AmazonUploader(IHostingEnvironment environment, ICoreAmazonS3 AmazonS3Client)
+        public AmazonUploader(IAmazonS3 AmazonS3Client)
         {
-            _hostingEnvironment = environment;
             _amazonS3Client = AmazonS3Client;
         }
 
-        public void Tester()
+        public async Task<bool> Tester()
         {
             try
             {
-                var x = _amazonS3Client.DoesS3BucketExistAsync(_bucketName);
+                await CreateBucketAsync();
+                var x = await _amazonS3Client.DoesS3BucketExistAsync(_bucketName);
+                var z = 0;
+                return x;
             }
             catch (Exception ex)
             {
                 var res = ex.Message;
             }
+
+            return false;
         }
+
+        public async Task CreateBucketAsync()
+        {
+            try
+            {
+
+                var putBucketRequest = new PutBucketRequest
+                {
+                    BucketName = _newBucketTest,
+                    UseClientRegion = true
+                };
+
+                PutBucketResponse putBucketResponse = await _amazonS3Client.PutBucketAsync(putBucketRequest);
+                
+                // Retrieve the bucket location.
+                //string bucketLocation = await FindBucketLocationAsync(s3Client);
+            }
+            catch (AmazonS3Exception e)
+            {
+                Console.WriteLine("Error encountered on server. Message:'{0}' when writing an object", e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
+            }
+        }
+
+
         //public void UploadToS3(string filePath)
         //{
         //    try

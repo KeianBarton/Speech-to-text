@@ -19,12 +19,17 @@ namespace Services.Services
 {
     public class AWSService : IAWSService
     {
-        //AWSService(ICoreAmazonS3 )
-        //{
 
-        //}
-        public SpeechRecognitionResult ParseSpeectToText(string[] args)
+        private readonly IAmazonUploader _amazonUploaderService;
+
+        public AWSService(IAmazonUploader amazonUploader)
         {
+            _amazonUploaderService = amazonUploader;
+        }
+
+        public async Task<SpeechRecognitionResult> ParseSpeectToText(string[] args)
+        {
+           var res = await _amazonUploaderService.Tester();
             return null;
         }
     }

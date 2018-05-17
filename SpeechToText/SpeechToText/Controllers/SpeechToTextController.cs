@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Services.IServices;
 
@@ -64,7 +65,7 @@ namespace STTRest.Controllers
 
         [HttpPost]
         [Route("parseAWS")]
-        public IActionResult ParseSpeectToTextAWS([FromBody] ClientWavObject clientInput)
+        public async Task<IActionResult> ParseSpeectToTextAWS([FromBody] ClientWavObject clientInput)
         {
 
             var sw = new Stopwatch();
@@ -72,7 +73,7 @@ namespace STTRest.Controllers
 
             var input = new string[] { clientInput.Base64String };
             //var result = _watsonSttService.ParseSpeectToText(input);
-            var res = _awsService.ParseSpeectToText();
+            var result = await _awsService.ParseSpeectToText(null);
 
             if (result == null)
             {

@@ -6,8 +6,8 @@ using Services.Models;
 
 namespace Services.IServices
 {
-    public interface IAWSService
+    public interface IAmazonUploader
     {
-        Task<SpeechRecognitionResult> ParseSpeectToText(string[] args);
+        Task<bool> Tester();
     }
 }
