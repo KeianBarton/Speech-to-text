@@ -9,16 +9,11 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
   animations: [
     trigger('squishWaveForm', [
       state('in', style({transform: 'translateX(0)'})),
-      transition(':enter', [
-        animate('300ms ease-in', keyframes([
-          style({height: '0px', offset: 0}),
-          style({height: '128px', offset: 1})
-        ]))
-      ]),
       transition(':leave', [
-        animate('300ms ease-in', keyframes([
-          style({height: '128px', offset: 0}),
-          style({height: '0px', offset: 1})
+        animate('600ms ease-out', keyframes([
+          style({opacity: 1, offset: 0}),
+          style({opacity: 0, height: '50vh', offset: 0.5}),
+          style({opacity: 0, height: '0px', offset: 1})
         ]))
       ])
     ])
