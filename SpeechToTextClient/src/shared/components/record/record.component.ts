@@ -9,11 +9,17 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
   animations: [
     trigger('squishWaveForm', [
       state('in', style({transform: 'translateX(0)'})),
+      transition(':enter', [
+        animate('300ms ease-in', keyframes([
+          style({opacity: 0, offset: 0}),
+          style({opacity: 1, offset: 1}),
+        ]))
+      ]),
       transition(':leave', [
         animate('600ms ease-out', keyframes([
-          style({opacity: 1, offset: 0}),
-          style({opacity: 0, height: '50vh', offset: 0.5}),
-          style({opacity: 0, height: '0px', offset: 1})
+          style({opacity: 1, transform: 'translateY(0)', offset: 0}),
+          style({opacity: 0, transform: 'translateY(5%)', height: '50vh', offset: 0.5}),
+          style({opacity: 0, transform: 'translateY(5%)', height: '0px', offset: 1})
         ]))
       ])
     ])
@@ -39,7 +45,7 @@ export class RecordComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._audioService.visulisationCallback = this.visualisationCallback.bind(this);
+    this._audioService.visualisationCallback = this.visualisationCallback.bind(this);
   }
 
   visualisationCallback(this, res) {
