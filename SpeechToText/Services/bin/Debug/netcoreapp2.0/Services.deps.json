@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "8afb0776024693ddba1cacd865d91c389a1098dd"
+    "signature": "e00a434526816fd2104a85efa123f67610abaca3"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,6 +11,7 @@
           "AWSSDK.Core": "3.3.22.5",
           "AWSSDK.Extensions.NETCore.Setup": "3.3.5",
           "AWSSDK.S3": "3.3.18.2",
+          "AWSSDK.TranscribeService": "3.3.1.2",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.3.0"
         },
         "runtime": {
@@ -46,6 +47,14 @@
         },
         "runtime": {
           "lib/netstandard1.3/AWSSDK.S3.dll": {}
+        }
+      },
+      "AWSSDK.TranscribeService/3.3.1.2": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.22.5"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AWSSDK.TranscribeService.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -694,6 +703,13 @@
       "sha512": "sha512-ZCa9tVh5F1ZezM/rESeSktcnURMpUrZlgjHEJECnPb5oTjjYpFzxiNt0dlOvhkhtZGzAiQGoNzjrXSsECYhx9Q==",
       "path": "awssdk.s3/3.3.18.2",
       "hashPath": "awssdk.s3.3.3.18.2.nupkg.sha512"
+    },
+    "AWSSDK.TranscribeService/3.3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-noy7zenrisS/eu+Z/17CHC/i262gTCU0l8I6zt9BWFxFWI4fLWYZp3MG+5esITEM182XKmsshj3PPGgULBKqng==",
+      "path": "awssdk.transcribeservice/3.3.1.2",
+      "hashPath": "awssdk.transcribeservice.3.3.1.2.nupkg.sha512"
     },
     "Microsoft.CSharp/4.0.1": {
       "type": "package",

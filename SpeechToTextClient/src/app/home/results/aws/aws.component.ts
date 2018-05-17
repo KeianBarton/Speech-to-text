@@ -15,6 +15,13 @@ export class AwsComponent implements OnInit {
   error = false;
 
   ngOnInit() {
+    this._speechToTextService.postWAVAWS(this.wavBase64String).subscribe(
+      response => {
+        this.responseModel = response;
+      },
+      err => {
+        this.error = true;
+      })
   }
 
 }

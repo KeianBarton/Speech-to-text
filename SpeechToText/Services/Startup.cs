@@ -1,4 +1,5 @@
 ﻿using Amazon.S3;
+using Amazon.TranscribeService;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services.IServices;
@@ -19,8 +20,8 @@ namespace Services
             var x = configuration.GetAWSOptions();
             services.AddDefaultAWSOptions(configuration.GetAWSOptions());
             services.AddAWSService<IAmazonS3>();
+            services.AddAWSService<IAmazonTranscribeService>();
         }
 
-        //public Configure()
     }
 }

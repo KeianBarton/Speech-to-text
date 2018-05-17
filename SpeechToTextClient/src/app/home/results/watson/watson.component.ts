@@ -14,15 +14,15 @@ export class WatsonComponent implements OnInit {
   responseModel: any = null;
   error = false;
 
-  ngOnInit() {this._speechToTextService.postWAVWatson(this.wavBase64String).subscribe(
-    response => {
-      this.responseModel = response;
-    },
-    err => {
-      this.error = true;
-    }
-  );
-
+  ngOnInit() {
+    // this._speechToTextService.postWAVWatson(this.wavBase64String).subscribe(
+    //   response => {
+    //     this.responseModel = response;
+    //   },
+    //   err => {
+    //     this.error = true;
+    //   }
+    // );
   }
 
 }

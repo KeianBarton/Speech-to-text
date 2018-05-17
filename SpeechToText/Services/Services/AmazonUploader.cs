@@ -1,5 +1,9 @@
 ﻿using System;
+using System.ComponentModel.Design;
+using System.IO;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
+using Amazon;
 using Amazon.Runtime.SharedInterfaces;
 using Amazon.S3;
 using Amazon.S3.Model;
@@ -10,9 +14,8 @@ namespace Services.Services
 {
     public class AmazonUploader : IAmazonUploader
     {
-        private IAmazonS3 _amazonS3Client; 
-        private string _bucketName = "speechtotextcomparison2";
-        private string _newBucketTest = "testbucketx746e73w12";
+        private readonly IAmazonS3 _amazonS3Client; 
+        private string _bucketName = "speechtotextcomparison";
         private static readonly string BucketSubdirectory = String.Empty;
 
         public AmazonUploader(IAmazonS3 AmazonS3Client)
@@ -20,80 +23,59 @@ namespace Services.Services
             _amazonS3Client = AmazonS3Client;
         }
 
-        public async Task<bool> Tester()
+        public async Task<bool> CheckBucketExists(string bucketName)
         {
             try
             {
-                await CreateBucketAsync();
-                var x = await _amazonS3Client.DoesS3BucketExistAsync(_bucketName);
-                var z = 0;
-                return x;
+                var res = await _amazonS3Client.DoesS3BucketExistAsync(bucketName);
+                return res;
             }
             catch (Exception ex)
             {
-                var res = ex.Message;
+                Console.WriteLine("Error encountered on server. Message:'{0}' when searching for bucket", ex.Message);
             }
 
             return false;
         }
 
-        public async Task CreateBucketAsync()
+        public async Task<S3UploadResponse> UploadBase64Wav(string base64)
         {
             try
             {
-
-                var putBucketRequest = new PutBucketRequest
+                byte[] bytes = Convert.FromBase64String(base64);
+                var filename = "S2C" + DateTime.UtcNow.ToString("ddMMyyyyhhmmss") + ".wav";
+                var request = new PutObjectRequest
                 {
-                    BucketName = _newBucketTest,
-                    UseClientRegion = true
+                    BucketName = _bucketName,
+                    CannedACL = S3CannedACL.PublicRead,
+                    Key = filename
                 };
 
-                PutBucketResponse putBucketResponse = await _amazonS3Client.PutBucketAsync(putBucketRequest);
-                
-                // Retrieve the bucket location.
-                //string bucketLocation = await FindBucketLocationAsync(s3Client);
+                using (var ms = new MemoryStream(bytes))
+                {
+                    request.InputStream = ms;
+                    await _amazonS3Client.PutObjectAsync(request);
+                    return new S3UploadResponse()
+                    {
+                        BucketName = _bucketName,
+                        FileRoute = filename,
+                        BucketRegion = _amazonS3Client.Config.RegionEndpoint.SystemName
+                    };
+                }
             }
-            catch (AmazonS3Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error encountered on server. Message:'{0}' when writing an object", e.Message);
+                Console.WriteLine("Error encountered on server. Message:'{0}' when writing an object", ex.Message);
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
-            }
+
+            return null;
         }
 
-
-        //public void UploadToS3(string filePath)
-        //{
-        //    try
-        //    {
-        //        var fileTransferUtility = new TransferUtility(_amazonS3Client.);
-
-        //        string bucketName;
-
-
-        //        if (string.IsNullOrEmpty(BucketSubdirectory))
-        //        {
-        //            bucketName = _bucketName; //no subdirectory just bucket name  
-        //        }
-        //        else
-        //        {   // subdirectory and bucket name  
-        //            bucketName = _bucketName + @"/" + BucketSubdirectory;
-        //        }
-
-
-        //        // 1. Upload a file, file name is used as the object key name.
-        //        fileTransferUtility.Upload(filePath, bucketName);
-        //        Console.WriteLine("Upload 1 completed");
-
-
-        //    }
-        //    catch (AmazonS3Exception s3Exception)
-        //    {
-        //        Console.WriteLine(s3Exception.Message,
-        //            s3Exception.InnerException);
-        //    }
-        //}
+        public class S3UploadResponse
+        {
+            public string BucketName { get; set; }
+            public string FileRoute { get; set; }
+            public string BucketRegion { get; set; }
+        }
     }
 }
