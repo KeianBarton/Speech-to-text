@@ -1,9 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition(':enter', [
+        animate('300ms ease-in', keyframes([
+          style({opacity: 0, transform: 'translateY(100vh)', offset: 0}),
+          style({opacity: 1, transform: 'translateY(0)', offset: 1})
+        ]))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', keyframes([
+          style({opacity: 1, transform: 'translateY(0)', offset: 0}),
+          style({opacity: 0, transform: 'translateY(100vh)', offset: 1})
+        ]))
+      ])
+    ])
+  ]
 })
 export class HomeComponent {
   private title = 'Speech to Text Comparator';

@@ -1,10 +1,28 @@
 import { Component, ViewChild, Output, EventEmitter, OnInit, NgZone } from '@angular/core';
 import { AudioService } from '../../services/audio.service';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-record',
   templateUrl: './record.component.html',
-  styleUrls: ['./record.component.css']
+  styleUrls: ['./record.component.css'],
+  animations: [
+    trigger('squishWaveForm', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition(':enter', [
+        animate('300ms ease-in', keyframes([
+          style({height: '0px', offset: 0}),
+          style({height: '128px', offset: 1})
+        ]))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', keyframes([
+          style({height: '128px', offset: 0}),
+          style({height: '0px', offset: 1})
+        ]))
+      ])
+    ])
+  ]
 })
 export class RecordComponent implements OnInit {
 

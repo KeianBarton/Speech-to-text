@@ -1,11 +1,11 @@
-<div id="home-container" class="container-fluid d-flex flex-column">
+<div id="home-container" class="container-fluid">
   <div id="title-container" class="row text-center">
     <h1 class="col text-light h-100">{{title}}</h1>
   </div>
-  <div id="record-container" class="row align-items-center" [ngClass]="{'centerdiv': !completed}">
+  <div id="record-container" class="row align-items-center">
     <app-record (audioEmitter)="handleAudioChange($event)" (completedEmitter)="handleCompletion($event)" class="col"></app-record>
   </div>
-  <div id="results-container" class="row mt-2 mb-2" *ngIf="wavBase64String!=''">
+  <div id="results-container" class="row mt-2 mb-2" *ngIf="wavBase64String!=''" [@flyInOut]>
     <app-aws [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4 mb-4"></app-aws>
     <app-azure [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4 mb-4"></app-azure>
     <app-watson [wavBase64String]="wavBase64String" class="col-12 col-sm-6 col-lg-4 mb-4"></app-watson>
