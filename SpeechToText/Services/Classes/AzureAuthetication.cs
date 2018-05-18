@@ -64,7 +64,7 @@ namespace Services.Classes
 
         private async Task<string> FetchToken(string fetchUri, string subscriptionKey)
         {
-            using (var client = new HttpClient())
+            using (var client = HttpProxyClient.CreateHttpClient())
             {
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
                 var uriBuilder = new UriBuilder(fetchUri);

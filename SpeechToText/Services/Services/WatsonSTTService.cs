@@ -26,7 +26,7 @@ namespace Services.Services
         public SpeechRecognitionResult ParseSpeectToText(string[] args)
         {
             var file = args[0];
-            using (var client = new HttpClient())
+            using (var client = HttpProxyClient.CreateHttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

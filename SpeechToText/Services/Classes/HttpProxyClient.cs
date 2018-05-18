@@ -15,11 +15,8 @@ namespace Services.Classes
                 var proxy = new WebProxy()
                 {
                     Address = new Uri("http://127.0.0.1:3128"),
-                    //BypassOnLocal = false,
                     UseDefaultCredentials = true
                 };
-
-                // Now create a client handler which uses that proxy
 
                 var httpClientHandler = new HttpClientHandler()
                 {
@@ -36,5 +33,5 @@ namespace Services.Classes
 
             return null;
         }
-}
+    }
 }
