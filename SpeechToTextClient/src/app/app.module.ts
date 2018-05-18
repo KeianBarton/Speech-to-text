@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SpeechtotextService } from '../shared/services/speechtotext.service';
@@ -11,7 +12,7 @@ import { AzureComponent } from './home/results/azure/azure.component';
 import { AwsComponent } from './home/results/aws/aws.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
+  imports:      [ BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, RecordComponent, HomeComponent, WatsonComponent, AzureComponent, AwsComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ SpeechtotextService ]

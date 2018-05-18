@@ -1,10 +1,29 @@
 import { Component, ViewChild, Output, EventEmitter, OnInit, NgZone } from '@angular/core';
 import { AudioService } from '../../services/audio.service';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-record',
   templateUrl: './record.component.html',
-  styleUrls: ['./record.component.css']
+  styleUrls: ['./record.component.css'],
+  animations: [
+    trigger('squishWaveForm', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition(':enter', [
+        animate('300ms ease-in', keyframes([
+          style({opacity: 0, offset: 0}),
+          style({opacity: 1, offset: 1}),
+        ]))
+      ]),
+      transition(':leave', [
+        animate('600ms ease-out', keyframes([
+          style({opacity: 1, transform: 'translateY(0)', offset: 0}),
+          style({opacity: 0, transform: 'translateY(5%)', height: '50vh', offset: 0.5}),
+          style({opacity: 0, transform: 'translateY(5%)', height: '0px', offset: 1})
+        ]))
+      ])
+    ])
+  ]
 })
 export class RecordComponent implements OnInit {
 
@@ -13,11 +32,12 @@ export class RecordComponent implements OnInit {
   private wavBase64String = '';
   private recording = false;
   private completed = false;
-  private visulisationValues = new Array<number>();
+  private visualisationValues = new Array<number>();
   private barWidth = 1;
   private barGap = 0;
 
   @Output() audioEmitter = new EventEmitter<string>();
+  @Output() completedEmitter = new EventEmitter<boolean>();
 
   constructor(
     private _audioService: AudioService,
@@ -25,7 +45,7 @@ export class RecordComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._audioService.visulisationCallback = this.visualisationCallback.bind(this);
+    this._audioService.visualisationCallback = this.visualisationCallback.bind(this);
   }
 
   visualisationCallback(this, res) {
@@ -99,10 +119,17 @@ export class RecordComponent implements OnInit {
     this.wavBase64String = result;
     this.completed = true;
     this.audioEmitter.emit(this.wavBase64String);
+    this.completedEmitter.emit(this.completed);
   }
 
   restart() {
+    const self = this;
+    this._ngZone.run(() => {
+      self.visualisationValues = new Array<number>();
+    });
     this.completed = false;
-    this.audioEmitter.emit('');
+    this.wavBase64String = '';
+    this.audioEmitter.emit(this.wavBase64String);
+    this.completedEmitter.emit(this.completed);
   }
 }

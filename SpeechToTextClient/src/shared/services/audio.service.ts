@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AudioService {
 
   public stream: MediaStream;
-  public visulisationCallback: any = null;
+  public visualisationCallback: any = null;
   public callback = null;
 
   private leftchannel: any = new Array;
@@ -27,8 +27,10 @@ export class AudioService {
       stream.getVideoTracks().forEach(track => track.stop());
     }
 
-    this.processor.onaudioprocess = null;
-    this.processor = null;
+    if (this.processor) {
+      this.processor.onaudioprocess = null;
+      this.processor = null;
+    }
     this.analyser = null;
     this.analyser2 = null;
   }
@@ -105,8 +107,6 @@ export class AudioService {
     this.processor.connect(this.context.destination);
 
     this.processor.onaudioprocess = this.generateSounds.bind(this, bufferSize);
-
-
   }
 
   generateSounds(this, bufferSize, e) {
@@ -118,15 +118,15 @@ export class AudioService {
     this.rightchannel.push(new Float32Array(right));
     this.recordingLength += bufferSize;
 
-    if (this.visulisationCallback != null) {
+    if (this.visualisationCallback != null) {
         this.generateVisulisation();
     }
   }
 
   generateVisulisation() {
       const res = this.generateSpectrum();
-      if (this.visulisationCallback != null) {
-        this.visulisationCallback(res);
+      if (this.visualisationCallback != null) {
+        this.visualisationCallback(res);
       }
   }
 
