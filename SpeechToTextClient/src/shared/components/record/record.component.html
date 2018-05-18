@@ -1,13 +1,18 @@
-<div class="row sound-bar">
-    <div *ngFor="let bar of visualisationValues" class="adjustable-bar" [style.height.%]="bar" [style.width.%]="barWidth"></div>
-</div>
-
-<div class="m-4 text-center">
-  <!--<audio #audioElement controls></audio>-->
-  <a *ngIf="!recording" [ngClass]="{disabled: !readyToReRecord}" (click)="startRecording()" class="btn btn-light rounded-circle">
-    <i class="fa fa-circle"></i>
-  </a>
-  <a *ngIf="recording" (click)="stopRecording()" class="btn btn-light rounded-circle">
+<div class="text-center d-flex flex-column h-100">
+  <div id="sound-bar" class="row m-5">
+    <div *ngFor="let bar of visualisationValues" class="adjustable-bar"
+      [style.height.%]="bar" [style.width.%]="barWidth"
+      [style.marginRight.%]="barGap"></div>
+  </div>
+  <div id="button-container" class="m-5">
+    <a *ngIf="recording&&!completed" (click)="stopRecording()" class="btn btn-light rounded-circle">
       <i class="fa fa-square"></i>
     </a>
+    <a *ngIf="!recording&&!completed" (click)="startRecording()" class="btn btn-light rounded-circle">
+      <i class="fa fa-circle"></i>
+    </a>
+    <a *ngIf="completed" (click)="restart()" class="btn btn-light rounded-circle">
+      <i class="fa fa-repeat"></i>
+    </a>
+  </div>
 </div>
