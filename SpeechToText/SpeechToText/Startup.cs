@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Services.Models;
 using STTRest.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -15,6 +16,7 @@ namespace STTRest
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            var x = Configuration.GetSection("MyConfig");
 
         }
 
@@ -39,6 +41,9 @@ namespace STTRest
                         .AllowCredentials()
                         .WithExposedHeaders("x-custom-header"));
             });
+
+            // Add our Config object so it can be injected
+            services.Configure<MyConfig>(Configuration.GetSection("MyConfig"));
 
             Services.Startup.ConfigureServices(services, Configuration);
         }

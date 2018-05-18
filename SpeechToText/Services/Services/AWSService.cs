@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Net;
-using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Amazon.TranscribeService;
 using Amazon.TranscribeService.Model;
+using Microsoft.Extensions.Options;
 using Services.Classes;
 using Services.IServices;
 using Services.Models;
@@ -16,11 +15,13 @@ namespace Services.Services
 
         private readonly IAmazonUploader _amazonUploaderService;
         private readonly IAmazonTranscribeService _amazonTranscribeService;
+        private readonly IHttpProxyClientService _httpProxyClientService;
 
-        public AWSService(IAmazonUploader amazonUploader, IAmazonTranscribeService amazonTranscribeService)
+        public AWSService(IAmazonUploader amazonUploader, IAmazonTranscribeService amazonTranscribeService, IHttpProxyClientService httpProxyClientService)
         {
             _amazonUploaderService = amazonUploader;
             _amazonTranscribeService = amazonTranscribeService;
+            _httpProxyClientService = httpProxyClientService;
         }
 
         public async Task<SpeechRecognitionResult> ParseSpeectToText(string[] args)
@@ -67,17 +68,15 @@ namespace Services.Services
                 }
 
                 var jsonRes = "";
-                using (var client = HttpProxyClient.CreateHttpClient())
+                using (var client = _httpProxyClientService.CreateHttpClient())
                 {
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     var response = client
                     .GetAsync(jobRes.TranscriptionJob.Transcript.TranscriptFileUri).Result;
-                    //.GetAsync(testInput).Result;
 
                     if (!response.IsSuccessStatusCode) return null;
                     jsonRes = response.Content.ReadAsStringAsync().Result;
-                    //jsonRes = wc.(jobRes.TranscriptionJob.Transcript.TranscriptFileUri);
                 }
 
                 // Once done delete the file

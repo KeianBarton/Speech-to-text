@@ -72,7 +72,6 @@ namespace STTRest.Controllers
             sw.Start();
 
             var input = new string[] { clientInput.Base64String };
-            //var result = _watsonSttService.ParseSpeectToText(input);
             var result = await _awsService.ParseSpeectToText(input);
 
             if (result == null)

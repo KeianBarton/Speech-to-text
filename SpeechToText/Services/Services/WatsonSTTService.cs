@@ -16,17 +16,23 @@ using Services.Models;
 
 namespace Services.Services
 {
-    class WatsonSTTService : IWatsonSTTService
+    public class WatsonSTTService : IWatsonSTTService
     {
+        private readonly IHttpProxyClientService _httpProxyClientService;
 
         private static string username = "d99e7579-fcc3-403c-bb6d-ac4c86eec841";
         private static string password = "plRwOk0IuiQb";
         private static string model = "en-US_NarrowbandModel";
 
+        public WatsonSTTService(IHttpProxyClientService httpProxyClientService)
+        {
+            _httpProxyClientService = httpProxyClientService;
+        }
+
         public SpeechRecognitionResult ParseSpeectToText(string[] args)
         {
             var file = args[0];
-            using (var client = HttpProxyClient.CreateHttpClient())
+            using (var client = _httpProxyClientService.CreateHttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -60,9 +66,6 @@ namespace Services.Services
                     ExternalServiceTimeInMilliseconds = sw.ElapsedMilliseconds
                 };
             }
-
-            return null;
-
         }
     }
 }

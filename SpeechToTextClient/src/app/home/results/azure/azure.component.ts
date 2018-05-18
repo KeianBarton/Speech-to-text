@@ -17,7 +17,15 @@ export class AzureComponent implements OnInit {
   ngOnInit() {
     this._speechToTextService.postWAVAzure(this.wavBase64String).subscribe(
       response => {
-        this.responseModel = response;
+        if (response.jsonResult.NBest){
+          this.responseModel = response;
+          this.error = false;
+        }
+        else{
+          this.responseModel = null;
+          this.error = true;  
+        } 
+        
       },
       err => {
         this.error = true;

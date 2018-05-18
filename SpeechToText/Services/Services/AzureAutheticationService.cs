@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Services.Services;
 
 namespace Services.Classes
 {
@@ -64,7 +65,7 @@ namespace Services.Classes
 
         private async Task<string> FetchToken(string fetchUri, string subscriptionKey)
         {
-            using (var client = HttpProxyClient.CreateHttpClient())
+            using (var client = _HttpProxyClientService.CreateHttpClient())
             {
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
                 var uriBuilder = new UriBuilder(fetchUri);
