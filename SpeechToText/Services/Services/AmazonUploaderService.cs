@@ -1,26 +1,21 @@
 ﻿using System;
-using System.ComponentModel.Design;
 using System.IO;
-using System.Reflection.Metadata;
 using System.Threading.Tasks;
-using Amazon;
-using Amazon.Runtime.SharedInterfaces;
 using Amazon.S3;
 using Amazon.S3.Model;
-using Amazon.S3.Util;
 using Services.IServices;
 
 namespace Services.Services
 {
-    public class AmazonUploader : IAmazonUploader
+    public class AmazonUploaderService : IAmazonUploader
     {
         private readonly IAmazonS3 _amazonS3Client; 
         private string _bucketName = "speechtotextcomparison";
         private static readonly string BucketSubdirectory = String.Empty;
 
-        public AmazonUploader(IAmazonS3 AmazonS3Client)
+        public AmazonUploaderService(IAmazonS3 amazonS3Client)
         {
-            _amazonS3Client = AmazonS3Client;
+            _amazonS3Client = amazonS3Client;
         }
 
         public async Task<bool> CheckBucketExists(string bucketName)

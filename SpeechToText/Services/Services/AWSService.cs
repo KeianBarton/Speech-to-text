@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Amazon.TranscribeService;
 using Amazon.TranscribeService.Model;
 using Microsoft.Extensions.Options;
-using Services.Classes;
 using Services.IServices;
 using Services.Models;
 

@@ -5,7 +5,7 @@ using Services.Models;
 
 namespace Services.IServices
 {
-    public interface IAzureSTTService
+    public interface IWatsonSpeechToTextService
     {
         SpeechRecognitionResult ParseSpeectToText(string[] args);
     }

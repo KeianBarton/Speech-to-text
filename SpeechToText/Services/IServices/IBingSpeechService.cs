@@ -5,7 +5,7 @@ using Services.Models;
 
 namespace Services.IServices
 {
-    public interface IWatsonSTTService
+    public interface IBingSpeechService
     {
         SpeechRecognitionResult ParseSpeectToText(string[] args);
     }

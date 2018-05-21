@@ -10,14 +10,14 @@ namespace STTRest.Controllers
     public class SpeechToTextController : Controller
     {
 
-        private readonly IAzureSTTService _azureSTTService;
-        private readonly IWatsonSTTService _watsonSttService;
+        private readonly IBingSpeechService _bingSpeechService;
+        private readonly IWatsonSpeechToTextService _watsonSpeechToTextService;
         private readonly IAWSService _awsService;
 
-        public SpeechToTextController(IAzureSTTService azureSTTService, IWatsonSTTService watsonSttService, IAWSService awsService)
+        public SpeechToTextController(IBingSpeechService bingSpeechService, IWatsonSpeechToTextService watsonSpeechToTextService, IAWSService awsService)
         {
-            _azureSTTService = azureSTTService;
-            _watsonSttService = watsonSttService;
+            _bingSpeechService = bingSpeechService;
+            _watsonSpeechToTextService = watsonSpeechToTextService;
             _awsService = awsService;
 
         }
@@ -30,7 +30,7 @@ namespace STTRest.Controllers
             sw.Start();
             
             var input = new string []{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-US&format=detailed", clientInput.Base64String};
-            var result = _azureSTTService.ParseSpeectToText(input);
+            var result = _bingSpeechService.ParseSpeectToText(input);
 
             if (result == null)
             {
@@ -51,7 +51,7 @@ namespace STTRest.Controllers
             sw.Start();
             
             var input = new string[] {clientInput.Base64String};
-            var result = _watsonSttService.ParseSpeectToText(input);
+            var result = _watsonSpeechToTextService.ParseSpeectToText(input);
 
             if (result == null)
             {

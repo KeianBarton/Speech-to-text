@@ -51,5 +51,31 @@ namespace Services.Services
             return null;
         }
 
+        public HttpWebRequest CreateHttpWebRequest(string requestUri)
+        {
+            try
+            {
+                var useProxy = _config.Value.UseProxy;
+                HttpWebRequest res = (HttpWebRequest)WebRequest.Create(requestUri);
+
+                if (!useProxy)
+                {
+                    return res;
+                }
+
+                var proxyHost = _config.Value.ProxyHost;
+                var proxyPort = _config.Value.ProxyPort;
+                var myproxy = new WebProxy(proxyHost, proxyPort) { BypassProxyOnLocal = false };
+                res.Proxy = myproxy;
+                
+                return res;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            return null;
+        }
     }
 }
