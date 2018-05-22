@@ -1,10 +1,12 @@
-<div class="text-center d-flex flex-column h-100">
-  <div id="sound-bar" class="row m-5">
+<div class="text-center d-flex flex-column">
+  <div *ngIf="!completed&&recording" [@squishWaveForm] id="sound-bar" class="row ml-4 mr-4">
     <div *ngFor="let bar of visualisationValues" class="adjustable-bar"
       [style.height.%]="bar" [style.width.%]="barWidth"
-      [style.marginRight.%]="barGap"></div>
+      [style.marginRight.%]="barGap">
+      <div class="bar-shadow"></div>
+    </div>
   </div>
-  <div id="button-container" class="m-5">
+  <div id="button-container" class="mt-4 mb-4">
     <a *ngIf="recording&&!completed" (click)="stopRecording()" class="btn btn-light rounded-circle">
       <i class="fa fa-square"></i>
     </a>

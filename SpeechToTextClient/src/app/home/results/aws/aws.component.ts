@@ -15,6 +15,7 @@ export class AwsComponent implements OnInit {
   error = false;
 
   ngOnInit() {
+
     this._speechToTextService.postWAVAWS(this.wavBase64String).subscribe(
       response => {
         if (response.jsonResult.results.transcripts[0].transcript != ""){
@@ -28,6 +29,7 @@ export class AwsComponent implements OnInit {
       err => {
         this.error = true;
       })
+
   }
 
 }
