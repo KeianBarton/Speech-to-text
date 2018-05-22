@@ -9,14 +9,14 @@ using Services.Models;
 
 namespace Services.Services
 {
-    public class AWSService : IAWSService
+    public class AwsService : IAwsService
     {
 
         private readonly IAmazonUploader _amazonUploaderService;
         private readonly IAmazonTranscribeService _amazonTranscribeService;
         private readonly IHttpProxyClientService _httpProxyClientService;
 
-        public AWSService(IAmazonUploader amazonUploader, IAmazonTranscribeService amazonTranscribeService, IHttpProxyClientService httpProxyClientService)
+        public AwsService(IAmazonUploader amazonUploader, IAmazonTranscribeService amazonTranscribeService, IHttpProxyClientService httpProxyClientService)
         {
             _amazonUploaderService = amazonUploader;
             _amazonTranscribeService = amazonTranscribeService;

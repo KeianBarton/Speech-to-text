@@ -12,9 +12,9 @@ namespace STTRest.Controllers
 
         private readonly IBingSpeechService _bingSpeechService;
         private readonly IWatsonSpeechToTextService _watsonSpeechToTextService;
-        private readonly IAWSService _awsService;
+        private readonly IAwsService _awsService;
 
-        public SpeechToTextController(IBingSpeechService bingSpeechService, IWatsonSpeechToTextService watsonSpeechToTextService, IAWSService awsService)
+        public SpeechToTextController(IBingSpeechService bingSpeechService, IWatsonSpeechToTextService watsonSpeechToTextService, IAwsService awsService)
         {
             _bingSpeechService = bingSpeechService;
             _watsonSpeechToTextService = watsonSpeechToTextService;
@@ -29,7 +29,8 @@ namespace STTRest.Controllers
             var sw = new Stopwatch();
             sw.Start();
             
-            var input = new string []{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-US&format=detailed", clientInput.Base64String};
+            //Language can be set in the url
+            var input = new[]{"https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=en-GB&format=detailed", clientInput.Base64String};
             var result = _bingSpeechService.ParseSpeectToText(input);
 
             if (result == null)

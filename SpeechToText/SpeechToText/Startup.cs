@@ -1,11 +1,8 @@
-﻿using Amazon;
-using Amazon.S3;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services.Models;
-using STTRest.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
 

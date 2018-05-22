@@ -1,126 +1,40 @@
-# Speech-to-text
+Getting Started
 
-Implementations
+This project is designed to explore and test the implementations of speech to text services. Currently the following services are tested:
 
-Azure Bing Speech Api  : Free Tier
-Documentation : https://docs.microsoft.com/en-gb/azure/cognitive-services/speech/home
+* Bing Speech
+* Watson Speech to Text
+* AWS Transcribe 
 
-Example Response structure (JSON Response):
+There is also a blog post at https://sacode.co.uk/speech-to-text-service-comparisons/
 
-OK
-{
-  "RecognitionStatus": "Success",
-  "Offset": 22500000,
-  "Duration": 21000000,
-  "NBest": [{
-    "Confidence": 0.941552162,
-    "Lexical": "find a funny movie to watch",
-    "ITN": "find a funny movie to watch",
-    "MaskedITN": "find a funny movie to watch",
-    "Display": "Find a funny movie to watch."
-  }]
-} 
+Prerequisites
 
-	
-Watson Speech-To-Text : Free Tier
-Documentation: https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/
+* Visual Studio 2017 with the AWS toolkit
+* Visual Studio Code with the Angular6 CLI installed.
+* An AWS Account.
+* An Azure Account.
+* An IBM Account.
 
-Example Response structure (JSON Response):
-{
-  "results": [
-    {
-      "word_alternatives": [
-        {
-          "start_time": 0.09,
-          "alternatives": [
-            {
-              "confidence": 1.0,
-              "word": "latest"
-            }
-          ],
-          "end_time": 0.6
-        },
-        {
-          "start_time": 0.6,
-          "alternatives": [
-            {
-              "confidence": 1.0,
-              "word": "weather"
-            }
-          ],
-          "end_time": 0.85
-        },
-        . . .
-        {
-          "start_time": 6.85,
-          "alternatives": [
-            {
-              "confidence": 0.9988,
-              "word": "on"
-            }
-          ],
-          "end_time": 7.0
-        },
-        {
-          "start_time": 7.0,
-          "alternatives": [
-            {
-              "confidence": 0.9953,
-              "word": "Sunday"
-            }
-          ],
-          "end_time": 7.71
-        }
-      ],
-      "keywords_result": {
-        "colorado": [
-          {
-            "normalized_text": "Colorado",
-            "start_time": 6.26,
-            "confidence": 0.999,
-            "end_time": 6.85
-          }
-        ],
-        "tornadoes": [
-          {
-            "normalized_text": "tornadoes",
-            "start_time": 4.7,
-            "confidence": 0.964,
-            "end_time": 5.52
-          }
-        ]
-      },
-      "alternatives": [
-        {
-          "timestamps": [
-            [
-              "the",
-              0.03,
-              0.09
-            ],
-            [
-              "latest",
-              0.09,
-              0.6
-            ],
-            . . .
-            [
-              "on",
-              6.85,
-              7.0
-            ],
-            [
-              "Sunday",
-              7.0,
-              7.71
-            ]
-          ],
-          "confidence": 0.968,
-          "transcript": "the latest weather report a line of severe thunderstorms with several possible tornadoes is approaching Colorado on Sunday "
-        }
-      ],
-      "final": true
-    }
-  ],
-  "result_index": 0
-}
+Installing
+
+The project is fairly simple to run, open up visual studio and head to the appsettings.json file. Within it you will need to set your keys from Azure Bing to Speech and your IBM Watson keys to. AWS should be configured through the AWS toolkits AWS Solution Explorer Window. If you're not using a proxy then make sure to set UseProxy to false too.
+Then start the VS project, if all is successful you should see a swagger window open.
+
+Next open the client project in Visual Studio Code and within the integrated terminal run
+
+```
+yarn start
+```
+
+Now when you go to http://localhost:4200 you should get a nice sound recording application. Record some speech and watch the application do its magic!
+
+
+Authors
+Scott Alexander https://www.linkedin.com/in/scott-robert-alexander/
+Kate Short https://www.linkedin.com/in/kate-short/
+Keian Barton https://www.linkedin.com/in/keianbarton/
+
+Future Plans
+
+...

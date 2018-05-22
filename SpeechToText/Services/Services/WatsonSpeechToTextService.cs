@@ -17,7 +17,7 @@ namespace Services.Services
 
         private static string _username;
         private static string _password; 
-        private static string _model = "en-US_NarrowbandModel";
+        private static string _model = "en-UK_NarrowbandModel";
 
         public WatsonSpeechToTextService(IHttpProxyClientService httpProxyClientService, IOptions<MyConfig> config)
         {
@@ -47,7 +47,8 @@ namespace Services.Services
 
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
-                
+
+                //Language can be set in the url
                 var response = client
                     .PostAsync("https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?continuous=true&_model=" + _model,
                         content).Result;

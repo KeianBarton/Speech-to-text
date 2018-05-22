@@ -16,7 +16,7 @@ namespace Services
         {
             services.AddTransient<IBingSpeechService, BingSpeechService>();
             services.AddTransient<IWatsonSpeechToTextService, WatsonSpeechToTextService>();
-            services.AddTransient<IAWSService, AWSService>();
+            services.AddTransient<IAwsService, AwsService>();
 
             services.AddTransient<IAmazonUploader, AmazonUploaderService>();
             services.AddTransient<IAzureAuthenticationService, AzureAuthenticationService>();
