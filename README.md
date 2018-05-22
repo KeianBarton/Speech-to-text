@@ -36,6 +36,12 @@ Now when you go to http://localhost:4200 you should get a nice sound recording a
 * [Kate Short](https://www.linkedin.com/in/kate-short/)
 * [Keian Barton](https://www.linkedin.com/in/keianbarton/)
 
-Future Plans
+## Future Plans
 
-...
+Other Known Speech to Text Services
+
+* [Google Cloud Speech-To-Text](https://cloud.google.com/speech-to-text/)
+* [SpeechMatics](https://www.speechmatics.com/)
+* [Azure Speech services PREVIEW](https://azure.microsoft.com/en-us/try/cognitive-services/?api=speech-services)
+
+Language Translation research is a possible research route.
