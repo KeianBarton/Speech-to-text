@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';
 })
 export class SpeechtotextService {
 
-  _apiRoot = 'http://localhost:5000/api/speechToText/';
+  _apiRoot = 'https://localhost:44362/api/speechToText/';
   constructor(private _http: HttpClient) { }
 
   postWAVAzure(wavBlob: any): Observable<any> {
@@ -44,7 +44,26 @@ export class SpeechtotextService {
     const t0 = performance.now();
     let t1 = null;
 
-    return this._http.post<any>(this._apiRoot + 'parsewatson', body, options)
+    return this._http.post<any>(this._apiRoot + 'parseWatson', body, options)
+      .do(data => {
+        t1 = performance.now();
+      })
+      .map(data => {
+        return this.processRecogntionModel(data, t1-t0);
+      }) 
+      .catch(this.handleError);
+  }
+
+  postWAVAWS(wavBlob: any): Observable<any> {
+
+    const body = JSON.stringify({Base64String : wavBlob});
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const options = {headers: headers};
+
+    const t0 = performance.now();
+    let t1 = null;
+
+    return this._http.post<any>(this._apiRoot + 'parseAWS', body, options)
       .do(data => {
         t1 = performance.now();
       })

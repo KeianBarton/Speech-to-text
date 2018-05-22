@@ -7,3 +7,4 @@ SpeechToText/SpeechToText/bin/
 SpeechToText/.DS_Store
 SpeechToText/Services/bin/
 SpeechToText/Services/obj/
+SpeechToText/SpeechToText/appsettings.json

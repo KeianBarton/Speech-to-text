@@ -12,7 +12,7 @@ export class AudioService {
   private leftchannel: any = new Array;
   private rightchannel: any = new Array;
   private recordingLength = 0;
-  private bufferSize = 2048;
+  private bufferSize = 4096; // Effects recording speed, 4096 is a nice speed
   private sampleRate = 0;
 
   private processor: any = null;
